@@ -1,0 +1,38 @@
+.centered {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.bg-overlayspec {
+  background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
+    url(../images/bg.jpg);
+  /* opacity: 1; */
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  height: 650px;
+  z-index: -1;
+}
+
+#sec_pic {
+  position: relative;
+  text-align: center;
+}
+
+.jumborton {
+  position: absolute;
+  margin-left: auto;
+  margin-right: auto;
+  top: 2em;
+  padding: 32px 0 40px 0;
+  max-width: 650px;
+  border-radius: 4px;
+  background-color: white;
+  color: black;
+}
+
+input[class="form-control"] {
+  width: 80%;
+}
