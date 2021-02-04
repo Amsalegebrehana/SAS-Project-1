@@ -1,18 +1,18 @@
 .centered {
   position: absolute;
-  top: 50%;
+  top: 40%;
   left: 50%;
   transform: translate(-50%, -50%);
 }
 
 .bg-overlayspec {
   background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
-    url(../images/bg.jpg);
+    url(../images/service.jpg);
   /* opacity: 1; */
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center center;
-  height: 650px;
+  height: 1080px;
   z-index: -1;
 }
 
@@ -32,7 +32,39 @@
   background-color: white;
   color: black;
 }
+#terms {
+  text-align: left;
+  align-content: center;
+  padding: 0 100px;
+}
+#terms2 {
+  text-align: center;
+  align-content: center;
+  padding: 0px;
+  color: rgb(36, 42, 48);
+}
+.formContainer {
+  width: 550px;
+}
 
-input[class="form-control"] {
-  width: 80%;
+.button1 {
+  background-color: #735798;
+  color: white;
+}
+
+#specLink {
+  color: #735798;
+}
+
+.form-control {
+  width: 100%;
+}
+
+#inputForm {
+  width: 300px;
+}
+
+.button2 {
+  border: solid 1px rgb(177, 185, 195);
+  color: black;
 }
