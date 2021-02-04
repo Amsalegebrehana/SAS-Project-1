@@ -1,0 +1,269 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap');
+
+
+
+
+body{
+    background: white !important;
+    /*overflow: hidden;*/
+}
+nav{
+    background-color:white;
+    padding-bottom: -15%;
+}
+#navbarResponsive{
+    font-size: .99em;
+    padding-right: 15%;
+    padding: 5%;
+    font-weight: 400;
+   
+    margin-top: -4%;
+    
+   
+}
+.nav a{
+    margin-top: -5%;
+    color: #735798;
+    font-size: 1.11em;
+    padding-left: 4.5em;
+    margin-bottom: 4%;
+   font-weight: 450;
+   
+   
+}
+.nav .logo{
+    margin-bottom: 8%;
+    height: 90px;
+}
+.background_image img{
+    
+    display: flex;
+    height: 400px;
+    background-color: #f6f5f1;
+    background-repeat: no-repeat;
+    margin-left: 0%;
+    background-size: cover;
+    width: 100%;
+    
+}
+
+.description{
+    margin-top: 10%;
+}
+.column {
+    float: left;
+    width: 25%;
+    padding: 0 10px;
+}
+.gallery{
+    padding: 10px;
+    margin-bottom: 30px;
+}
+.gallery .results {
+    font-weight: 600
+}
+
+.gallery select {
+    border: none;
+    outline: none;
+    padding: 0px 4px;
+    cursor: pointer;
+    background: inherit
+}
+
+.gallery .card {
+    border-radius: 5%;
+    cursor: pointer
+}
+
+.gallery .card:hover {
+    transform: scale(1.08);
+    transition: all 0.4s ease-in-out
+}
+
+.gallery img {
+    background-color: #fdf8f4;
+    width: 250px;
+    height: 250px;
+    object-fit: contain;
+    padding-top: 10px
+}
+
+.gallery .card-body {
+    padding: 0.5rem;
+    padding-top: 0.7rem;
+    padding-right: 0.2rem
+}
+
+
+
+.gallery .h6 {
+    margin: 0
+}
+
+.gallery .btn {
+    padding-top: 0
+}
+
+.gallery .btn:hover {
+    color: #a085a8
+}
+
+.gallery div.text-muted {
+    font-size: 0.9rem
+}
+
+@media(max-width:372px) {
+    .gallery .results {
+        font-size: 0.9rem
+    }
+}
+
+@media(max-width:330px) {
+    .gallery  .results {
+        font-size: 0.85rem
+    }
+}
+
+@media(min-height: 700px) {
+    body {
+        height: 100vh
+    }
+}
+
+@media(max-width:768px) {
+    body {
+        height: 100%
+    }
+}
+.about .title{
+    text-align: center;
+}
+.taskers .container {
+    background-color: white;
+    text-align: center;
+    border-radius: 20px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, .2);
+    margin-bottom: 50px
+}
+
+.taskers .title {
+    font-size: 25px;
+    font-weight: 100
+}
+
+.taskers .icon {
+    position: relative;
+    bottom: 11px
+}
+
+.taskers .mt-100 {
+    margin-top: 100px
+}
+
+.taskers  .profile img {
+    width: 68px;
+    height: 68px;
+    border-radius: 50%
+}
+
+.taskers  .card {
+    border-radius: 15px;
+    margin-left: 30px;
+    margin-right: 30px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, .2)
+}
+
+.taskers  .card-body {
+    position: relative;
+    bottom: 35px
+}
+
+.taskers  .btn {
+    margin-top: 36px;
+    margin-bottom: 45px;
+    background-color: #AB47BC;
+    border: none;
+    color: #fff
+}
+
+.taskers  .btn:hover {
+    -webkit-transform: scale(1.05);
+    -ms-transform: scale(1.05);
+    transform: scale(1.05);
+    color: #fff
+}
+
+.taskers  .header {
+    padding-top: 40px
+}
+
+.about .card {
+    margin-top: 20%;
+    border-radius: 20px;
+    background: #eeeeee;
+    box-shadow: 20px 20px 60px #eaeaeb, -20px -20px 60px #ffffff;
+    border: none
+}
+
+.about .card img {
+    border-radius: 50%;
+    background: linear-gradient(145deg, #9e8ea3, #ffffff);
+    box-shadow: 20px 20px 60px #cacaca, -20px -20px 60px #ffffff
+}
+
+
+
+.mdi-36px {
+    font-size: 39px;
+    margin-left: 30px;
+    
+}
+
+.about .neo-button {
+    width: 40px;
+    height: 40px;
+    outline: 0 !important;
+    cursor: pointer;
+    color: #fff;
+    font-size: 15px;
+    border: none;
+    margin-right: 10px;
+    border-radius: 50%;
+    background: linear-gradient(145deg, #a085a8, #ffffff);
+    box-shadow: 20px 20px 60px #cacaca, -20px -20px 60px #ffffff
+}
+
+.about .neo-button:active {
+    border-radius: 50%;
+    background: linear-gradient(145deg, #a085a8, #ffffff);
+    box-shadow: inset 20px 20px 60px #cacaca, inset -20px -20px 60px #ffffff
+}
+
+.fa-facebook {
+    color: #823b98
+}
+
+.fa-linkedin {
+    color: #823b98
+}
+
+.fa-google {
+    color: #823b98
+}
+
+.fa-youtube {
+    color: #cd201f
+}
+
+.fa-twitter {
+    color: #823b98
+}
+
+footer{
+    margin-top: 12%;
+    padding: 3%;
+    background: #735798;
+    color: white;
+    margin-bottom: 0%;
+}
