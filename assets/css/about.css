@@ -78,10 +78,10 @@ nav{
 
 
 .dropdown-menu a{
-    /* font-size: 1em; */
+  
     width: 280px;
     padding-left: 60px;
-    /* text-align: center; */
+   
     
 }
 
@@ -100,7 +100,7 @@ nav{
 }
 
 .tog i{
-    /* background-color: brown; */
+    
     font-size: 30px;
     color: silver;
 }
@@ -115,19 +115,19 @@ nav{
 @media screen and (max-width:800px){
     .logo{
         margin-left: 10px;
-        /* background-color: blue; */
+        
         height: 100px;
         
     }
 
     .pic{
-        /* background-color: brown; */
+        
         height: 100px;
         width: 180px;
     }
 
    nav{
-       /* background-color: chartreuse; */
+      
        height:100px;
        background: #ffffff !important;
    }
