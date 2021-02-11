@@ -123,5 +123,41 @@ nav{
 }
 
 .col5 h2{
-padding-top: 150px;
+    padding-top: 150px;
+}
+
+.colFAQ ul li{
+    list-style: none;
+    padding-top: 20px;
+    font-size: 40px;
+    
+}
+
+.colFAQ ul li a{
+    text-decoration: none;
+    color:#735798;
+}
+
+.colFAQ h2{
+    font-weight: 400;
+}
+
+.colFAQ i{
+    font-size: 25px;
+}
+
+.cont6{
+    margin-top: 100px;
+}
+
+.imgholder2{
+    width:700px;
+    height: 550px;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    /* padding-right: 100px; */
+}
+
+.colStore h2{
+    padding-top: 200px;
 }
