@@ -1,0 +1,75 @@
+.dropdown a{
+    background-color: rgb(231, 160, 160);
+}
+
+.dropdown-content{
+    display: none;
+    /* background-color: blueviolet; */
+}
+
+.dropdown-content li{
+    list-style: none;
+    
+}
+
+.dropdown-content li a{
+    text-decoration: none;
+}
+
+.dropdown-content ul{
+    text-align: start;
+    
+}
+
+.dropdown:hover .dropdown-content{
+    display: block;
+}
+
+nav{
+    background-color:white;
+    padding-bottom: -15%;
+}
+#navbarResponsive{
+    font-size: .99em;
+    padding-right: 15%;
+    padding: 5%;
+    font-weight: 400;
+   
+    margin-top: -4%;
+    
+   
+}
+.nav a{
+    margin-top: -5%;
+    color: #735798;
+    font-size: 1.11em;
+    padding-left: 4.5em;
+    margin-bottom: 4%;
+   font-weight: 450;
+   
+   
+}
+.nav .logo{
+    margin-bottom: 8%;
+    height: 90px;
+}
+
+
+.cont{
+    /* margin-top: 10px; */
+    /* background-color: aqua; */
+    background: url(../images/service.jpg);
+    height: 500px;
+}
+
+.middle{
+    margin-top: 150px;
+    margin-left: 550px;
+    background-color: white;
+    width: 500px;
+    height: 250px;
+}
+
+.middle h2{
+    padding-top: 40px;
+}
