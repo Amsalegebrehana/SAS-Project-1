@@ -73,3 +73,29 @@ nav{
 .middle h2{
     padding-top: 40px;
 }
+
+.img{
+    height: 300px;
+    width: 600px;
+    padding-left: 100px;
+}
+
+.cont2{
+    margin-top: 100px;
+}
+
+.row1 {
+    margin-top: 50px;
+}
+
+.row2 h1{
+    margin-left: 450px;
+}
+
+.row2{
+    margin-top: 100px;
+}
+
+.rowabout{
+    margin-top: 100px;
+}
