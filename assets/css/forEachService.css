@@ -99,3 +99,29 @@ nav{
 .rowabout{
     margin-top: 100px;
 }
+
+.row4{
+    margin-top: 100px;
+    /* background-color: black; */
+}
+
+.row4 h2{
+    margin-left: 450px;
+}
+
+.imgholder{
+    width:900px;
+    height: 550px;
+    padding-left: 160px;
+    padding-top: 50px;
+    padding-bottom: 50px;
+
+}
+
+.row5{
+    background-color: rgb(221, 243, 250);
+}
+
+.col5 h2{
+padding-top: 150px;
+}
