@@ -160,7 +160,49 @@ nav{
     padding: 0 10px;
 }
 /**/
+/**/
+.back_img{
+    margin-top: 7%;
+    background-image:url('./../images/service.jpg')  ;
+    background-repeat: no-repeat; /* Do not repeat the image */
+    background-size: cover;
+}
+.back_img .card {
+    border: none;
+    margin: 7%;
+    background-color: rgba(255, 255, 255, 0.884);
+    
+}
 
+
+.back_img .card-inner {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    word-wrap: break-word;
+    background-color: rgba(255, 255, 255, 0.678);
+    background-clip: border-box;
+    border: 1px solid rgba(0, 0, 0, .125);
+    border-radius: .25rem;
+    border: none;
+    cursor: pointer;
+    transition: all 2s;
+}
+
+.back_img .card-inner:hover {
+    transform: scale(1.1);
+}
+
+.mg-text span {
+    font-size: 12px;
+}
+
+.mg-text {
+    line-height: 14px;
+}
+/**/
+/**/
 
 .taskers .container {
     background-color: white;
@@ -553,7 +595,7 @@ h6 {
 .section ol,
 ul {
     list-style: none;
-    margin: 0
+    margin: 0;
 }
 
 .section .banner .med-caption {
@@ -565,6 +607,7 @@ ul {
     font-weight: 200;
     font-size: 1.3em;
     color: #414040;
+    
 }
 
 .section .box-title small {
@@ -715,10 +758,13 @@ input[type="button"].button.yellow:hover {
 }
 
 .section .box {
-    border: 1px solid #cccccc
+    border-radius: .5rem;
+    border: 0.5px ;
+    box-shadow: #856b8f;
+
 }
 
 .section .fa {
-    color: #f0715f
+    color: #e4cf11
 }
 /**/

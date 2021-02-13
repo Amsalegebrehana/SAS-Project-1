@@ -1,74 +1,81 @@
-nav{
-    background-color:white;
-    padding-bottom: -15%;
+body {
+    background-color: #eee
 }
-#navbarResponsive{
-    font-size: .99em;
-    padding-right: 15%;
-    padding: 5%;
-    font-weight: 400;
-   
-    margin-top: -4%;
+
+.wrapper {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
     
-   
-}
-.nav a{
-    margin-top: -5%;
-    color: #735798;
-    font-size: 1.11em;
-    padding-left: 4.5em;
-    margin-bottom: 4%;
-   font-weight: 450;
-   
-   
-}
-.nav .logo{
-    margin-bottom: 8%;
-    height: 90px;
 }
 
-
-
-.con{
-    margin-top: 100px;
-    /* background-color: aqua; */
-    background: url(../images/service.jpg);
-    height: 400px;
+.card {
+    margin-top: 5%;
+    padding: 15px;
+    width: 80%;
+    border: none;
 }
 
-.con h1{
-    margin-top: 150px;
-    font-size: 50px;
-    color: white;
+.dark-button {
+    position: relative
 }
 
-
-
-
-.con2{
-    margin-top: 30px;
+.dot {
+    height: 22px;
+    width: 22px;
+    top: 5px;
+    position: relative;
+    background-color: #8E24AA;
+    border-radius: 50%;
+    display: inline-block;
+    cursor: pointer
 }
 
-.col2 h1{
-    font-weight: 400;
+.dark-dot {
+    height: 22px;
+    width: 22px;
+    top: 1%;
+    left: 77%;
+    position: absolute;
+    background-color: #585757;
+    border-radius: 50%;
+    display: inline-block;
+    opacity: 0
 }
 
-li{
-    list-style-type: none;
-    margin: 0%;
-    padding: 0%;
-    color: #735789;
+.dark-button {
+    cursor: pointer
 }
 
-.row{
-    margin-top: 50px;
-    /* background-color: aqua; */
+.mode.checked .mode {
+    background-color: red
 }
 
-footer{
-    margin-top: 12%;
-    padding: 3%;
-    background: #735798;
-    color: white;
-    margin-bottom: 0%;
+.card-dark {
+    background-color: #585757;
+    color: #fff
+}
+
+.card.card-dark .dark-dot {
+    animation: dark 0.5s ease-in forwards
+}
+
+@keyframes dark {
+    0% {
+        opacity: 0.2;
+        top: 15%;
+        left: 70%
+    }
+
+    50% {
+        opacity: 0.5 ;
+        top: 13%;
+        left: 75%
+    }
+
+    100% {
+        opacity: 1;
+        top: 7%;
+        left: 77%
+    }
 }
