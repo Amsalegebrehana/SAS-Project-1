@@ -7,7 +7,7 @@
     
     <link rel="stylesheet" href="./assets/css/style.css">
     <link rel="stylesheet" href="./assets/css/AuthStyle.css">
-    <link rel="stylesheet" href="./assets/css/forEachService.css">
+    <!-- <link rel="stylesheet" href="./assets/css/forEachService.css"> -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" rel="stylesheet" />
     
@@ -16,6 +16,39 @@
 <body>
     
     <nav class="nav navbar navbar-expand-md ">
+        <div class="logo">
+            <a class="nav-link active " href="index.html" ><img src="./assets/images/Slogo.png" alt="Logo" > </a>
+         </div>
+        
+        <button class="navbar-toggler  tog" type="button" data-toggle="collapse" data-target="#navbarResponsive" >
+            <span class="navbar-toggler-icon"><i class="fas fa-bars"></i></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarResponsive">
+      <ul class="navbar-nav ml-auto bar">
+          <li class="nav-item active"> <a class="nav-link" href="about.html">About Us</a> </li>
+          
+          <li class="nav-item dropdown">
+             <a class="nav-link service" href="services.html" data-toggle="dropdown">Services</a>
+              <ul class="dropdown-menu">
+                  <h4>Popular Tasks</h4>
+                  <li><a class="dropdown-item" href="Each Service.html"> Delivery Serivce</a></li>
+                  <li><a class="dropdown-item" href="Each Service.html"> Errand Running </a></li>
+                  <li><a class="dropdown-item" href="Each Service.html"> Delivery Serivce</a></li>
+                  <li><a class="dropdown-item" href="Each Service.html"> Errand Running </a></li>
+                  <li><a class="dropdown-item" href="Each Service.html"> Delivery Serivce</a></li>
+                  <li><a class="dropdown-item" href="Each Service.html"> Errand Running </a></li>
+              </ul>
+          </li>
+
+          <li class="nav-item active"><a class="nav-link" href="contact.html"> Contact</a></li>
+          <li class="nav-item active"><a class="nav-link" href="authOption.html"> Sign up/Log in</a></li>
+          <li class="nav-item active"><a  class="btn btn-outline-secondary " style="width: 50; padding: 10px;" href="becometasker.html">Become a Provider</a></li>
+      </ul>
+        </div> <!-- navbar-collapse.// -->
+      </nav>
+
+
+    <!-- <nav class="nav navbar navbar-expand-md ">
         <a class="nav-link active logo" href="index.html" ><img src="./assets/images/Slogo.png" alt="Logo" > </a> 
         <button class="navbar-toggler  " type="button" data-toggle="collapse" data-target="#navbarResponsive">
           <span class="navbar-toggler-icon"><i class="fas fa-bars"></i></span>
@@ -46,26 +79,7 @@
                                 <span>What I'm Doing Now</span> 
                             </a>
                         </li>
-                        <li>
-                            <a href="about.html" class="what">
-                                <span>What I'm Doing Now</span> 
-                            </a>
-                        </li>
-                        <li>
-                            <a href="about.html" class="what">
-                                <span>What I'm Doing Now</span> 
-                            </a>
-                        </li>
-                        <li>
-                            <a href="about.html" class="what">
-                                <span>What I'm Doing Now</span> 
-                            </a>
-                        </li>
-                        <li>
-                            <a href="about.html" class="what">
-                                <span>What I'm Doing Now</span> 
-                            </a>
-                        </li>
+                       
                     </ul>
                     
                   
@@ -88,7 +102,10 @@
                 
           </ul>
         </div>
-    </nav>  
+    </nav>   -->
+
+
+
     <div class="card mb-3">
         <img class="card-img-top" src="./assets/images/service.jpg" alt="Intro" style="height: 500px;">
         <div class="card-body">

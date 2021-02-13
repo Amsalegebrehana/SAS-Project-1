@@ -7,34 +7,95 @@ body{
     background: white !important;
     /*overflow: hidden;*/
 }
+@media all and (min-width:900px){
+    .navbar .nav-item .dropdown-menu{
+        display: none; 
+    }
+        /* .navbar .nav-item:hover .nav-link{ color: #fff;  } */
+    .navbar .nav-item:hover .dropdown-menu{
+         display: block; 
+         border:none;
+         /* border-left: solid 1px rgb(163, 163, 163);
+         border-right: solid 1px rgb(163, 163, 163); */
+    }
+    .navbar .nav-item .dropdown-menu{
+         margin-top:0;
+    }
+    .dropdown:hover{
+        border-top: solid 4px #735798;
+        /* border-left: solid 1px rgb(163, 163, 163);
+        border-right: solid 1px rgb(163, 163, 163); */
+    }
+    .dropdown:hover .service{
+        padding-top: 3.9%;
+    }
+}
+
+    
+    
 nav{
-    background-color:white;
-    padding-bottom: -15%;
+    background-color:rgb(255, 255, 255);
+    /* padding-bottom: -15%; */
+    height: 80px;
 }
 #navbarResponsive{
     font-size: .99em;
     padding-right: 15%;
     padding: 5%;
     font-weight: 400;
-   
     margin-top: -4%;
     
-   
 }
-.nav a{
-    margin-top: -5%;
+
+.bar a{
     color: #735798;
-    font-size: 1.11em;
-    padding-left: 4.5em;
-    margin-bottom: 4%;
+    /* font-size: 1em; */
    font-weight: 450;
-   
-   
+   margin-left: 20px;
+
 }
-.nav .logo{
-    margin-bottom: 8%;
-    height: 90px;
+.logo{
+    /* margin-top: 5px; */
+    margin-left: 200px;
 }
+
+
+
+
+.dropdown:hover .dropdown-menu a{
+    background-color: white;
+    padding-top: 15px;
+}
+
+
+.dropdown-menu a{
+    /* font-size: 1em; */
+    width: 280px;
+    padding-left: 60px;
+    /* text-align: center; */
+    
+}
+
+.dropdown-menu h4{
+    padding-top: 20px;
+    text-align: center;
+}
+
+.bar{
+    margin-top: 70px;
+    margin-right: 20px;
+}
+
+.bar a:hover{
+    color: #502588 ;
+}
+
+/* .tog{
+    margin-top: 10px;
+    background-color: violet;
+    color: black;
+} */
+
 .background_image img{
     
     display: flex;

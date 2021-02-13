@@ -1,57 +1,34 @@
-.dropdown a{
-    background-color: rgb(231, 160, 160);
-}
 
-.dropdown-content{
-    display: none;
-    /* background-color: blueviolet; */
-}
+/* @media all and (min-width: 992px) {
+	.navbar .nav-item .dropdown-menu{ display: none; }
+	.navbar .nav-item:hover .nav-link{ color: #fff;  }
+	.navbar .nav-item:hover .dropdown-menu{ display: block; }
+	.navbar .nav-item .dropdown-menu{ margin-top:0; }
+} */
 
-.dropdown-content li{
-    list-style: none;
-    
-}
+.navbar .nav-item .dropdown-menu{ display: none; }
+	.navbar .nav-item:hover .nav-link{ color: #fff;  }
+	.navbar .nav-item:hover .dropdown-menu{ display: block; }
+	.navbar .nav-item .dropdown-menu{ margin-top:0; }
 
-.dropdown-content li a{
-    text-decoration: none;
-}
-
-.dropdown-content ul{
-    text-align: start;
-    
-}
-
-.dropdown:hover .dropdown-content{
-    display: block;
-}
 
 nav{
     background-color:white;
-    padding-bottom: -15%;
+    height: 80px;
+    /* padding-bottom: -15%; */
 }
 #navbarResponsive{
     font-size: .99em;
     padding-right: 15%;
-    padding: 5%;
+    padding-top: 150px;
     font-weight: 400;
-   
     margin-top: -4%;
     
-   
 }
-.nav a{
-    margin-top: -5%;
-    color: #735798;
-    font-size: 1.11em;
-    padding-left: 4.5em;
-    margin-bottom: 4%;
-   font-weight: 450;
-   
-   
-}
-.nav .logo{
-    margin-bottom: 8%;
-    height: 90px;
+
+.logo{
+    margin-top: 20px;
+    margin-left: 100px;
 }
 
 
@@ -159,5 +136,58 @@ nav{
 }
 
 .colStore h2{
-    padding-top: 200px;
+    margin-top: 160px;
+}
+
+.colStore h2, .colStore p,.colStore input, .colStore a{
+    margin-left: 50px;
+    
+}
+
+.numberinp{
+    height:50px;
+    width: 350px;
+    border-radius: 5%;
+    border: none;
+}
+
+.btnApp, .btnHelp,.btnHelp2{
+    height: 70px;
+    /* background-color: #735798; */
+    color: white;
+}
+
+.btnApp{
+    width: 200px;
+    background-color: #735798;
+    /* color:white; */
+}
+
+.btnHelp{
+    margin-top: 30px;
+    background-color: black;
+    /* height: 75px; */
+}
+
+.btnHelp2{
+    margin-top: 30px;
+    margin-left: 10px;
+    /* height: 50px; */
+    background-color: black;
+}
+
+.colStore  p{
+    padding-right: 80px;
+    padding-top: 30px;
+}
+
+.colStore i{
+    /* color: white; */
+    font-size: 26px;
+}
+
+.colStore span{
+    padding-top: 0%;
+    padding-left: 20px;
+    font-size: 10px;
 }
