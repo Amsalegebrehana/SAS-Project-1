@@ -11,36 +11,40 @@
 </head>
 <body>
     
-    <nav class="nav navbar navbar-expand-md ">
-        <a class="nav-link active logo" href="index.html" ><img src="./assets/images/Slogo.png" alt="Logo" > </a> 
-        <button class="navbar-toggler  " type="button" data-toggle="collapse" data-target="#navbarResponsive">
-          <span class="navbar-toggler-icon"><i class="fas fa-bars"></i></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarResponsive">
-          <ul class="navbar-nav ml-auto">
-            <li class="nav-item active">
-              <a class="nav-link" href="about.html" >About us</a>
-             </li>
-                  <li class="nav-item ">
-                        <a class="nav-link active" href="services.html">Services</a>    
-                    </li>
-                  <li class="nav-item active">
-                    <a class="nav-link" href="contact.html" >Contact</a>
-                      
-                  </li>
-                  <li class="nav-item active">
-                    <a class="nav-link " href="login.html" >Sign up / Log in</a>
-                  </li>
-                  <li class="nav-item active">
-                    <a  class="btn btn-outline-secondary " style="width: 50; padding: 10px;" href="about.html">Become a Tasker</a>
-                </li>
-                
-                
+  <nav class="nav navbar navbar-expand-md ">
+    <div class="logo">
+        <a class="nav-link active " href="index.html" ><img src="./assets/images/Slogo.png" alt="Logo" class="pic"> </a>
+     </div>
+    
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive"  aria-expanded="false" aria-label="Toggle navigation" id="togg" onclick="clicked2()">
+        <span class="navbar-toggler-icon tog"><i class="fa fa-bars"></i></span>
+      </button>
+<div class="collapse navbar-collapse" id="navbarResponsive">
+  <ul class="navbar-nav ml-auto bar">
+      <li class="nav-item active"> <a class="nav-link" href="about.html">About Us</a> </li>
+      
+      <li class="nav-item dropdown">
+         <a class="nav-link service" id="service" data-toggle="dropdown"  href="services.html">Services</a>
+         <a class="nav-link"  id="service2" href="services.html">Services</a>
+          <ul class="dropdown-menu">
+              <h4>Popular Tasks</h4>
+              <li><a class="dropdown-item" href="Each Service.html"> Delivery Serivce</a></li>
+              <li><a class="dropdown-item" href="Each Service.html"> Errand Running </a></li>
+              <li><a class="dropdown-item" href="Each Service.html"> Delivery Serivce</a></li>
+              <li><a class="dropdown-item" href="Each Service.html"> Errand Running </a></li>
+              <li><a class="dropdown-item" href="Each Service.html"> Delivery Serivce</a></li>
+              <li><a class="dropdown-item" href="Each Service.html"> Errand Running </a></li>
           </ul>
-        </div>
-    </nav>  
+      </li>
 
-    <div class="container-fluid cont">
+      <li class="nav-item active"><a class="nav-link" href="contact.html"> Contact</a></li>
+      <li class="nav-item active"><a class="nav-link" href="authOption.html"> Sign up/Log in</a></li>
+      <li class="nav-item active"><a  class="btn btn-outline-secondary " style="width: 50; padding: 10px;" href="becometasker.html">Become a Provider</a></li>
+  </ul>
+    </div> <!-- navbar-collapse.// -->
+  </nav>
+
+    <div class="container-fluid cont" id="cont">
         <div class="row row">
             <div class="col-md-12 col text-center">
                 <div class="middle">

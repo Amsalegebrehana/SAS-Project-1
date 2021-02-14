@@ -90,11 +90,47 @@ nav{
     color: #502588 ;
 }
 
-/* .tog{
-    margin-top: 10px;
-    background-color: violet;
-    color: black;
-} */
+.tog i{
+    /* background-color: brown; */
+    font-size: 30px;
+    color: silver;
+}
+
+#service2{
+    display: none;
+}
+
+
+
+
+@media screen and (max-width:800px){
+    .logo{
+        margin-left: 10px;
+        /* background-color: blue; */
+        height: 100px;
+        
+    }
+
+    .pic{
+        /* background-color: brown; */
+        height: 100px;
+        width: 180px;
+    }
+
+   nav{
+       /* background-color: chartreuse; */
+       height:100px;
+   }
+
+   .dropdown-menu{
+       display: none;
+   }
+
+  
+}
+
+
+
 
 .background_image img{
     

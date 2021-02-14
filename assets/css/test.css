@@ -50,8 +50,28 @@ nav{
     margin-left: 200px;
 }
 
+.tog i{
+    /* background-color: brown; */
+    font-size: 30px;
+    color: silver;
+}
 
+@media screen and (max-width:800px){
+    .logo{
+        margin-left: 10px;
+        background-color: blue;
+        height: 100px;
+        
+    }
 
+    .pic{
+        background-color: brown;
+        height: 100px;
+        width: 130px;
+    }
+
+   
+}
 
 .dropdown:hover .dropdown-menu a{
     background-color: white;
@@ -81,88 +101,13 @@ nav{
     color: #502588 ;
 }
 
-.tog i{
-    /* background-color: brown; */
-    font-size: 30px;
-    color: silver;
+
+
+
+img{
+    width: 400px;
 }
 
-#service2{
-    display: none;
-}
-
-
-
-
-@media screen and (max-width:800px){
-    .logo{
-        margin-left: 10px;
-        /* background-color: blue; */
-        height: 100px;
-        
-    }
-
-    .pic{
-        /* background-color: brown; */
-        height: 100px;
-        width: 180px;
-    }
-
-   nav{
-       /* background-color: chartreuse; */
-       height:100px;
-   }
-
-   .dropdown-menu{
-       display: none;
-   }
-
-  
-}
-
-
-
-
-.con{
-    margin-top: 100px;
-    /* background-color: aqua; */
-    background: url(../images/service.jpg);
-    height: 400px;
-}
-
-.con h1{
-    margin-top: 150px;
-    font-size: 50px;
-    color: white;
-}
-
-
-
-
-.con2{
-    margin-top: 30px;
-}
-
-.col2 h1{
-    font-weight: 400;
-}
-
-li{
-    list-style-type: none;
-    margin: 0%;
-    padding: 0%;
-    color: #735789;
-}
-
-.row{
-    margin-top: 50px;
-    /* background-color: aqua; */
-}
-
-footer{
-    margin-top: 12%;
-    padding: 3%;
-    background: #735798;
-    color: white;
-    margin-bottom: 0%;
+.cont{
+    margin-top: 200px;
 }
