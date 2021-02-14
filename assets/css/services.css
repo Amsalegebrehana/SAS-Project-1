@@ -166,3 +166,95 @@ footer{
     color: white;
     margin-bottom: 0%;
 }
+
+.picholder{
+    width: 850px;
+    height: 600px;
+    padding-left: 100px;
+}
+
+.form,.colform h2,.colform h5{
+    padding-left: 100px;
+    padding-right: 100px;
+}
+
+.colform h5{
+    font-weight: 100;
+}
+
+.form{
+    padding-right: 200px;
+}
+
+.label1{
+    font-size: 25px;
+    margin-top: 20px;
+    font-weight: 600;
+}
+
+.form p span{
+    font-size: 45px;
+    font-weight: 600;
+}
+
+.form p{
+    margin-top: 50px;
+}
+
+.btnstart{
+    width: 470px;
+    background-color: #735798 ;
+    color: white;
+    margin-top: 30px;
+}
+
+.btnstart:hover{
+    color: white;
+    background-color: #4e2a7e;
+}
+
+.form p:nth-child(7){
+    text-align: center;
+    margin-top: 30px;
+}
+
+.form p:nth-child(7) a{
+    text-decoration: none;
+}
+
+.hor{
+    color: #502588 ;
+    height: 10px;
+}
+
+.coldesc p{
+    /* background-color: blue; */
+    padding-left: 600px;
+    padding-right: 600px;
+    margin-top: 20px;
+}
+
+.about{
+    margin-top: 130px;
+}
+
+.about h4{
+    margin-top: 20px;
+}
+
+.imgabout{
+    width: 850px;
+    height: 400px;
+    padding-left: 100px;
+}
+
+.colabout p{
+    padding-right: 300px;
+}
+
+.rowdesc{
+    margin-top: 200px;
+}
+.about h2{
+    text-align: center;
+}
