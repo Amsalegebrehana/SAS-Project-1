@@ -12,6 +12,8 @@ function clicked(){
     }
     else{
         firstPic.style.marginTop="0px";
+        service1.style.display="block";
+        service2.style.display="none";
     }
 
     
@@ -25,6 +27,8 @@ function clicked2(){
     }
     else{
         about.style.marginTop="0px"; 
+        service1.style.display="block";
+        service2.style.display="none";
     }
 }
 

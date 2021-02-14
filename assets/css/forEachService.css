@@ -239,8 +239,8 @@ nav{
     border: none;
 }
 
-.btnApp, .btnHelp,.btnHelp2{
-    height: 70px;
+.btnHelp,.btnHelp2{
+    height: 50px;
     /* background-color: #735798; */
     color: white;
 }
@@ -248,7 +248,13 @@ nav{
 .btnApp{
     width: 200px;
     background-color: #735798;
-    /* color:white; */
+    color:white;
+    height: 50px;
+    /* border-radius: 10%; */
+    margin-left: 20px;
+}
+.btnApp span{
+    color:white;
 }
 
 .btnHelp{
@@ -274,10 +280,15 @@ nav{
     font-size: 26px;
 }
 
-.colStore span{
+.colStore small{
     padding-top: 0%;
     padding-left: 20px;
+    text-transform: uppercase;
     font-size: 10px;
+}
+
+.colStore a{
+    padding-top: 0%;
 }
 
 /*
@@ -428,9 +439,21 @@ nav{
 .cont5{
     margin-top: 50px;
 }
+.cards{
+    height: 600px;
+}
 
 .rowabout h4,.rowabout p{
     text-align: left;
-    
+    margin-top: 15px;
 }
 
+.img3{
+    border-radius: 50%;
+    width: 100px;
+    margin-top: 20px;
+}
+
+.cards ul li{
+    list-style-type: none;
+}
