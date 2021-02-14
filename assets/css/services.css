@@ -1,15 +1,12 @@
-body {
-    background-color: #eee
-}
 
-.wrapper {
+.privacy .wrapper {
     height: 100vh;
     display: flex;
     justify-content: center;
     
 }
 
-.card {
+.privacy .card {
     margin-top: 5%;
     padding: 15px;
     width: 80%;

@@ -768,3 +768,86 @@ input[type="button"].button.yellow:hover {
     color: #e4cf11
 }
 /**/
+
+/*privacy*/
+
+.privacy .wrapper {
+   
+    display: flex;
+    justify-content: center;
+    
+}
+
+.privacy .card {
+    margin-top: 5%;
+    padding: 15px;
+    width: 80%;
+    border: none;
+    background-color: #f3f2f3;
+
+}
+
+.dark-button {
+    position: relative
+}
+
+.dot {
+    height: 22px;
+    width: 22px;
+    top: 5px;
+    position: relative;
+    background-color: #8E24AA;
+    border-radius: 50%;
+    display: inline-block;
+    cursor: pointer
+}
+
+.dark-dot {
+    height: 22px;
+    width: 22px;
+    top: 1%;
+    left: 77%;
+    position: absolute;
+    background-color: #585757;
+    border-radius: 50%;
+    display: inline-block;
+    opacity: 0
+}
+
+.dark-button {
+    cursor: pointer
+}
+
+.mode.checked .mode {
+    background-color: red
+}
+
+.card-dark {
+    background-color: #585757;
+    color: #fff
+}
+
+.card.card-dark .dark-dot {
+    animation: dark 0.5s ease-in forwards
+}
+
+@keyframes dark {
+    0% {
+        opacity: 0.2;
+        top: 15%;
+        left: 70%
+    }
+
+    50% {
+        opacity: 0.5 ;
+        top: 13%;
+        left: 75%
+    }
+
+    100% {
+        opacity: 1;
+        top: 7%;
+        left: 77%
+    }
+}
+/**/

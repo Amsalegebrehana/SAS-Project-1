@@ -27,4 +27,33 @@ function clicked2(){
         about.style.marginTop="0px"; 
     }
 }
+document.addEventListener("DOMContentLoaded", function(event) {
 
+    var div = document.getElementById('mode');
+    div.addEventListener('click', function(e){
+    
+    var li = document.getElementById('card-mode');
+    var bgdark = document.getElementById('dark-background');
+    
+    if (li.className.split(' ')[1] == "card-dark") {
+    
+    li.classList.remove('card-dark');
+    bgdark.classList.remove('bg-dark');
+    
+    
+    }else{
+    
+    
+    
+    
+    li.classList.add('card-dark');
+    bgdark.classList.add('bg-dark');
+    
+    }
+    
+    
+    });
+    
+    
+    
+    });
