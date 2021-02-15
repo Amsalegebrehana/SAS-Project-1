@@ -585,3 +585,13 @@ footer{
 .foot li:not(:first-child) {
     color: rgb(196, 193, 193) !important;
 }
+
+.rowprovider{
+    margin-top: 70px;
+}
+
+.contlist h2{
+    margin-top: 50px;
+    text-align: center;
+}
+
