@@ -120,13 +120,10 @@ nav{
   
 }
 
-
-
-
 .con{
-    margin-top: 100px;
+    margin-top: 0%;
     /* background-color: aqua; */
-    background: url(../images/back2.jpg);
+    background: url(../images/deliver.jpeg);
     background-repeat: no-repeat;
     background-size: cover;
     height: 600px;
@@ -171,6 +168,16 @@ li .link{
     width:460px;
     height: 40px;
     
+}
+
+.card p{
+    font-style: italic;
+}
+
+.card{
+    border: none;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, .2)
+
 }
 
 
