@@ -6,191 +6,236 @@
     <link rel="icon"  type="image/png" href="./assets/images/logoo.png">
     
     <link rel="stylesheet" href="./assets/css/style.css">
-    <link rel="stylesheet" href="./assets/css/AuthStyle.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
     
-    <title>Service Provider</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.2.1/owl.carousel.js"></script>
+    
+    <title>services.html Provider</title>
 </head>
 <body>
     
-    <nav class="nav navbar navbar-expand-md ">
-        <a class="nav-link active logo" href="index.html" ><img src="./assets/images/Slogo.png" alt="Logo" > </a> 
-        <button class="navbar-toggler  " type="button" data-toggle="collapse" data-target="#navbarResponsive">
-          <span class="navbar-toggler-icon"><i class="fas fa-bars"></i></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarResponsive">
-          <ul class="navbar-nav ml-auto">
-            <li class="nav-item active">
-              <a class="nav-link" href="about.html" >About us</a>
-             </li>
-                  <li class="nav-item ">
-                        <a class="nav-link active" href="services.html">Services</a>    
-                    </li>
-                  <li class="nav-item active">
-                    <a class="nav-link" href="contact.html" >Contact</a>
+    <nav class="nav navbar navbar-expand-md fixed-top">
+        <div class="logo">
+            <a class="nav-link active " href="index.html" ><img src="./assets/images/Slogo.png" alt="Logo" class="pic"> </a>
+         </div>
+        
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive"  aria-expanded="false" aria-label="Toggle navigation" id="togg" onclick="clicked2()">
+            <span class="navbar-toggler-icon tog"><i class="fa fa-bars"></i></span>
+          </button>
+    <div class="collapse navbar-collapse" id="navbarResponsive">
+      <ul class="navbar-nav ml-auto bar">
+          <li class="nav-item active"> <a class="nav-link" href="about.html">About Us</a> </li>
+          
+          <li class="nav-item dropdown">
+            <a class="nav-link service" id="service" data-toggle="dropdown"  href="services.html">Services</a>
+            <a class="nav-link"  id="service2" href="services.html">Services</a>
+              <ul class="dropdown-menu">
+                  
+                  <li><a class="dropdown-item" href="eachService.html"> Delivery Serivce</a></li>
+                  <li><a class="dropdown-item" href="eachService.html"> Errand Running </a></li>
+                  <li><a class="dropdown-item" href="eachService.html"> Delivery Serivce</a></li>
+                  <li><a class="dropdown-item" href="eachService.html"> Errand Running </a></li>
+                  <li><a class="dropdown-item" href="eachService.html"> Delivery Serivce</a></li>
+                  <li><a class="dropdown-item" href="eachService.html"> Errand Running </a></li>
+              </ul>
+          </li>
+    
+          <li class="nav-item active"><a class="nav-link" href="contact.html"> Contact</a></li>
+          <li class="nav-item active"><a class="nav-link" href="authOption.html"> Sign up/Log in</a></li>
+          <li class="nav-item active"><a  class="btn btn-outline-secondary " style="width: 50; padding: 10px;" href="becomeAProvider.html">Become a Provider</a></li>
+      </ul>
+        </div> <!-- navbar-collapse.// -->
+      </nav>
+      <div class="back_img">
+        <div class="container mt-4">
+          <div class="row d-flex justify-content-center">
+              <div class="col-md-9">
+                  <div class="card p-4 mt-3">
+                      <h3 class="heading mt-5 text-center">SAS! How can we help You?</h3>
                       
-                  </li>
-                  <li class="nav-item active">
-                    <a class="nav-link " href="authOption.html" >Sign up / Log in</a>
-                  </li>
-                  <li class="nav-item active">
-                    <a  class="btn btn-outline-secondary " style="width: 50; padding: 10px;" href="becometasker.html">Become a Provider</a>
-                </li>
-                
-                
-          </ul>
-        </div>
-    </nav>  
-    <div class="card mb-3">
-        <img class="card-img-top" src="./assets/images/service.jpg" alt="Intro" style="height: 500px;">
-        <div class="card-body">
-            <div class="page-content page-container" id="page-content">
-                <div class="padding">
-                    <div class="row container d-flex justify-content-center">
-                        <div class="template-demo mt-2"> <button class="btn btn-outline-dark btn-icon-text"> <i class="fa fa-apple btn-icon-prepend mdi-36px"></i> <span class="d-inline-block text-left"> <small class="font-weight-light d-block">Available on the</small> App Store </span> </button> <button class="btn btn-outline-dark btn-icon-text"> <i class="fa fa-android btn-icon-prepend mdi-36px"></i> <span class="d-inline-block text-left"> <small class="font-weight-light d-block">Get it on the</small> Google Play </span> </button> </div>
-                    </div>
-                </div>
+                      <div class="row mt-4 g-1 px-4 mb-5">
+                          <div class="col-md-2">
+                              <div class="card-inner p-3 d-flex flex-column align-items-center"> <img src="https://i.imgur.com/Mb8kaPV.png" width="50">
+                                  <div class="text-center mg-text"> <span class="mg-text">Account</span> </div>
+                              </div>
+                          </div>
+                          <div class="col-md-2">
+                              <div class="card-inner p-3 d-flex flex-column align-items-center"> <img src="https://i.imgur.com/ueLEPGq.png" width="50">
+                                  <div class="text-center mg-text"> <span class="mg-text">Payments</span> </div>
+                              </div>
+                          </div>
+                          <div class="col-md-2">
+                              <div class="card-inner p-3 d-flex flex-column align-items-center"> <img src="https://i.imgur.com/tmqv0Eq.png" width="50">
+                                  <div class="text-center mg-text"> <span class="mg-text">Delivery</span> </div>
+                              </div>
+                          </div>
+                          <div class="col-md-2">
+                              <div class="card-inner p-3 d-flex flex-column align-items-center"> <img src="https://i.imgur.com/D0Sm15i.png" width="50">
+                                  <div class="text-center mg-text"> <span class="mg-text">Product</span> </div>
+                              </div>
+                          </div>
+                          <div class="col-md-2">
+                              <div class="card-inner p-3 d-flex flex-column align-items-center"> <img src="https://i.imgur.com/Z7BJ8Po.png" width="50">
+                                  <div class="text-center mg-text"> <span class="mg-text">Anytime</span> </div>
+                              </div>
+                          </div>
+                          <div class="col-md-2">
+                              <div class="card-inner p-3 d-flex flex-column align-items-center"> <img src="https://i.imgur.com/YLsQrn3.png" width="50">
+                                  <div class="text-center mg-text"> <span class="mg-text">Guarantee</span> </div>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+      
+      </div>
+     
+    
+<div class="section">
+    <div class="container">
+        <h2 style="font-weight: 300; margin-bottom: 5%; font-style: oblique;">TOP Project areas</h2>
+        <div class="image-carousel style2 flexslider" data-animation="slide" data-item-width="250" data-item-margin="30">
+            <div class="flex-viewport" style="overflow: hidden; position: relative; padding-bottom: 5%;">
+                <ul class="slides image-box hotel listing-style1" style="width: 1000%; transition-duration: 0.6s; transform: translate3d(-300px, 0px, 0px);">
+                   
+                    <li style="width: 250px; float: left; display: block;">
+                        <article class="box">
+                            <figure> <a href="services.html" class="hover-effect popup-gallery"><img width="250" height="160" alt="" src="./assets/images/cleaning.jpg" draggable="false"></a> </figure>
+                            <div class="details"> <span class="price"><small>avg/night </small>$188</span>
+                                <h5 class="box-title">&nbsp;Cleaning <small>A.A</small></h5>
+                                <div class="feedback">
+                                    <div data-placement="bottom" data-toggle="tooltip" class="fa fa-star" title="" data-original-title="4 stars"><span style="width: 60%;" class="five-stars"></span></div> <span class="review">2 reviews</span>
+                                </div>
+                                <p class="description"></p>
+                               </div>
+                        </article>
+                    </li>
+                    <li style="width: 250px; float: left; display: block;">
+                        <article class="box">
+                            <figure> <a href="services.html" class="hover-effect popup-gallery"><img width="250" height="160" alt="cleaning services.htmls" src="./assets/images/cleaning.jpg" draggable="false"></a> </figure>
+                            <div class="details"> <span class="price"><small>avg/night </small>$88</span>
+                                <h5 class="box-title">&nbsp;Cleaning <small>A.A</small></h5>
+                                <div class="feedback">
+                                    <div data-placement="bottom" data-toggle="tooltip" class="fa fa-star" title="" data-original-title="4 stars"><span style="width: 60%;" class="five-stars"></span></div> <span class="review">2 reviews</span>
+                                </div>
+                                <p class="description"></p>
+                               </div>
+                        </article>
+                    </li>
+                    <li style="width: 250px; float: left; display: block;">
+                        <article class="box">
+                            <figure> <a href="services.html" class="hover-effect popup-gallery"><img width="250" height="160" alt="hometohome" src="./assets/images/hometohome.jpeg" draggable="false"></a> </figure>
+                            <div class="details"> <span class="price"><small>avg/night </small>$10</span>
+                                <h5 class="box-title">&nbsp;Home to Home <small>A.A</small></h5>
+                                <div class="feedback">
+                                    <div data-placement="bottom" data-toggle="tooltip" class="fa fa-star" title="" data-original-title="4 stars"><span style="width: 60%;" class="five-stars"></span></div> <span class="review">2 reviews</span>
+                                </div>
+                                <p class="description"></p>
+                               </div>
+                        </article>
+                    </li>
+                    <li style="width: 250px; float: left; display: block;">
+                        <article class="box">
+                            <figure> <a href="services.html" class="hover-effect popup-gallery"><img width="250" height="160" alt="Fixing technician" src="./assets/images/fixing.jpeg" draggable="false"></a> </figure>
+                            <div class="details"> <span class="price"><small>avg/night </small>$185</span>
+                                <h5 class="box-title">&nbsp;Fixing <small>A.A</small></h5>
+                                <div class="feedback">
+                                    <div data-placement="bottom" data-toggle="tooltip" class="fa fa-star" title="" data-original-title="4 stars"><span style="width: 60%;" class="five-stars"></span></div> <span class="review">2 reviews</span>
+                                </div>
+                                <p class="description"></p>
+                               </div>
+                        </article>
+                    </li>
+                    <li style="width: 250px; float: left; display: block;">
+                        <article class="box">
+                            <figure> <a href="services.html" class="hover-effect popup-gallery"><img width="250" height="160" alt="mechanician" src="./assets/images/mechanic.jpeg" draggable="false"></a> </figure>
+                            <div class="details"> <span class="price"><small>avg/night </small>$188</span>
+                                <h5 class="box-title">&nbsp;Mechanician <small>A.A</small></h5>
+                                <div class="feedback">
+                                    <div data-placement="bottom" data-toggle="tooltip" class="fa fa-star" title="" data-original-title="4 stars"><span style="width: 60%;" class="five-stars"></span></div> <span class="review">2 reviews</span>
+                                </div>
+                                <p class="description"></p>
+                               </div>
+                        </article>
+                    </li>
+                </ul>
+            </div>
+            <div class="flex-viewport" style="overflow: hidden; position: relative;">
+                <ul class="slides image-box hotel listing-style1" style="width: 1000%; transition-duration: 0.6s; transform: translate3d(-300px, 0px, 0px);">
+                   
+                    <li style="width: 250px; float: left; display: block;">
+                        <article class="box">
+                            <figure> <a href="services.html" class="hover-effect popup-gallery"><img width="250" height="160" alt="" src="./assets/images/cleaning.jpg" draggable="false"></a> </figure>
+                            <div class="details"> <span class="price"><small>avg/night </small>$188</span>
+                                <h5 class="box-title">&nbsp;Cleaning <small>A.A</small></h5>
+                                <div class="feedback">
+                                    <div data-placement="bottom" data-toggle="tooltip" class="fa fa-star" title="" data-original-title="4 stars"><span style="width: 60%;" class="five-stars"></span></div> <span class="review">2 reviews</span>
+                                </div>
+                                <p class="description"></p>
+                               </div>
+                        </article>
+                    </li>
+                    <li style="width: 250px; float: left; display: block;">
+                        <article class="box">
+                            <figure> <a href="services.html" class="hover-effect popup-gallery"><img width="250" height="160" alt="cleaning services.htmls" src="./assets/images/electrcian.jpg" draggable="false"></a> </figure>
+                            <div class="details"> <span class="price"><small>avg/night </small>$88</span>
+                                <h5 class="box-title">&nbsp;Electrcians <small>A.A</small></h5>
+                                <div class="feedback">
+                                    <div data-placement="bottom" data-toggle="tooltip" class="fa fa-star" title="" data-original-title="4 stars"><span style="width: 60%;" class="five-stars"></span></div> <span class="review">2 reviews</span>
+                                </div>
+                                <p class="description"></p>
+                               </div>
+                        </article>
+                    </li>
+                    <li style="width: 250px; float: left; display: block;">
+                        <article class="box">
+                            <figure> <a href="services.html" class="hover-effect popup-gallery"><img width="250" height="160" alt="hometohome" src="./assets/images/painting.jpeg" draggable="false"></a> </figure>
+                            <div class="details"> <span class="price"><small>avg/night </small>$10</span>
+                                <h5 class="box-title">&nbsp;Painting <small>A.A</small></h5>
+                                <div class="feedback">
+                                    <div data-placement="bottom" data-toggle="tooltip" class="fa fa-star" title="" data-original-title="4 stars"><span style="width: 60%;" class="five-stars"></span></div> <span class="review">2 reviews</span>
+                                </div>
+                                <p class="description"></p>
+                               </div>
+                        </article>
+                    </li>
+                    <li style="width: 250px; float: left; display: block;">
+                        <article class="box">
+                            <figure> <a href="services.html" class="hover-effect popup-gallery"><img width="250" height="160" alt="Fixing technician" src="./assets/images/shoping.jpg" draggable="false"></a> </figure>
+                            <div class="details"> <span class="price"><small>avg/night </small>$185</span>
+                                <h5 class="box-title">&nbsp;Safe Shoping <small>A.A</small></h5>
+                                <div class="feedback">
+                                    <div data-placement="bottom" data-toggle="tooltip" class="fa fa-star" title="" data-original-title="4 stars"><span style="width: 60%;" class="five-stars"></span></div> <span class="review">2 reviews</span>
+                                </div>
+                                <p class="description"></p>
+                               </div>
+                        </article>
+                    </li>
+                    <li style="width: 250px; float: left; display: block;">
+                        <article class="box">
+                            <figure> <a href="services.html" class="hover-effect popup-gallery"><img width="250" height="160" alt="mechanician" src="./assets/images/fix.jpeg" draggable="false"></a> </figure>
+                            <div class="details"> <span class="price"><small>avg/night </small>$188</span>
+                                <h5 class="box-title">&nbsp;Mechanician <small>A.A</small></h5>
+                                <div class="feedback">
+                                    <div data-placement="bottom" data-toggle="tooltip" class="fa fa-star" title="" data-original-title="4 stars"><span style="width: 60%;" class="five-stars"></span></div> <span class="review">2 reviews</span>
+                                </div>
+                                <p class="description"></p>
+                               </div>
+                        </article>
+                    </li>
+                </ul>
             </div>
         </div>
     </div>
-    
+</div>
 
-    <section class="gallery">
-        <div class="container mt-3">
-            <div class="d-flex align-items-center justify-content-between py-4 results">
-                <div><h1>Top projects</h1></div>
-                <div> <span>Price: </span> <select name="price" id="price">
-                        <option value="l2h" selected>low to high</option>
-                        <option value="l2h">high to low</option>
-                    </select> </div>
-            </div>
-            <div class="row">
-                <div class="col-lg-3 col-md-6 offset-md-0 offset-sm-1 col-sm-10 offset-sm-1 my-lg-0 my-2">
-                    <div class="card"> <img class="card-img-top" src="https://images.unsplash.com/photo-1590402494930-602f7f857294?ixid=MXwxMjA3fDB8MHxzZWFyY2h8Mnx8dGFza3N8ZW58MHx8MHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60">
-                        <div class="card-body">
-                            <div class="d-flex align-items-start justify-content-between">
-                                <div class="d-flex flex-column">
-                                    <div class="h6 font-weight-bold">Pearl earrings</div>
-                                    <div class="text-muted">$140</div>
-                                </div>
-                                
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6 offset-md-0 offset-sm-1 col-sm-10 offset-sm-1 my-lg-0 my-2">
-                    <div class="card"> <img class="card-img-top" src="https://www.freepnglogos.com/uploads/jewellery-png/jewellery-saraswati-png-transparent-saraswati-images-7.png">
-                        <div class="card-body">
-                            <div class="d-flex align-items-start justify-content-between">
-                                <div class="d-flex flex-column">
-                                    <div class="h6 font-weight-bold">Pearl earrings</div>
-                                    <div class="text-muted">$155</div>
-                                </div>
-                                
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6 offset-md-0 offset-sm-1 col-sm-10 offset-sm-1 my-lg-0 my-2">
-                    <div class="card"> <img class="card-img-top" src="https://www.freepnglogos.com/uploads/jewellery-png/jewellery-wedding-folk-your-true-folk-wedding-ceremony-4.png">
-                        <div class="card-body">
-                            <div class="d-flex align-items-start justify-content-between">
-                                <div class="d-flex flex-column">
-                                    <div class="h6 font-weight-bold">Pearl earrings</div>
-                                    <div class="text-muted">$130</div>
-                                </div>
-                                
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6 offset-md-0 offset-sm-1 col-sm-10 offset-sm-1 my-lg-0 my-2">
-                    <div class="card"> <img class="card-img-top" src="https://www.freepnglogos.com/uploads/jewellery-png/jewellery-transparent-png-pictures-icons-and-png-34.png">
-                        <div class="card-body">
-                            <div class="d-flex align-items-start justify-content-between">
-                                <div class="d-flex flex-column">
-                                    <div class="h6 font-weight-bold">Pearl earrings</div>
-                                    <div class="text-muted">$153</div>
-                                </div>
-                                
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="row py-3">
-                <div class="col-lg-3 col-md-6 offset-md-0 offset-sm-1 col-sm-10 offset-sm-1 my-lg-0 my-2">
-                    <div class="card"> <img class="card-img-top" src="https://www.freepnglogos.com/uploads/jewellery-png/wedding-jewellery-png-image-with-transparent-backgound-13.png">
-                        <div class="card-body">
-                            <div class="d-flex align-items-start justify-content-between">
-                                <div class="d-flex flex-column">
-                                    <div class="h6 font-weight-bold">Pearl earrings</div>
-                                    <div class="text-muted">$250</div>
-                                </div>
-                                
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6 offset-md-0 offset-sm-1 col-sm-10 offset-sm-1 my-lg-0 my-2">
-                    <div class="card"> <img class="card-img-top" src="https://www.freepnglogos.com/uploads/jewellery-png/jewellery-jewelry-images-png-style-guru-fashion-glitz-glamour-33.png">
-                        <div class="card-body">
-                            <div class="d-flex align-items-start justify-content-between">
-                                <div class="d-flex flex-column">
-                                    <div class="h6 font-weight-bold">Pearl earrings</div>
-                                    <div class="text-muted">$150</div>
-                                </div>
-                                
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6 offset-md-0 offset-sm-1 col-sm-10 offset-sm-1 my-lg-0 my-2">
-                    <div class="card"> <img class="card-img-top" src="https://www.freepnglogos.com/uploads/jewellery-png/jewellery-price-for-jewelry-and-jewelry-objects-salzburg-act-29.png">
-                        <div class="card-body">
-                            <div class="d-flex align-items-start justify-content-between">
-                                <div class="d-flex flex-column">
-                                    <div class="h6 font-weight-bold">Pearl earrings</div>
-                                    <div class="text-muted">$120</div>
-                                </div>
-                                
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6 offset-md-0 offset-sm-1 col-sm-10 offset-sm-1 my-lg-0 my-2">
-                    <div class="card"> <img class="card-img-top" src="https://www.freepnglogos.com/uploads/jewellery-png/jewellery-png-images-download-wedding-bangle-ring-9.png">
-                        <div class="card-body">
-                            <div class="d-flex align-items-start justify-content-between">
-                                <div class="d-flex flex-column">
-                                    <div class="h6 font-weight-bold">Pearl earrings</div>
-                                    <div class="text-muted">$150</div>
-                                </div>
-                                
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-        <div class="row no-gutters">
-            
-            <div class="col">
-                <div class="card-block px-2">
-                    <h4 class="card-title">Title</h4>
-                    <p class="card-text">Description</p>
-                    <a href="#" class="btn button1">BUTTON</a>
-                </div>
-            </div>
-            <div class="col-auto">
-                <img  src="https://assets.taskrabbit.com/v3/assets/homepage/joanne-valued-tasker@720w.jpg" class="img-fluid" alt="">
-            </div>
-        </div>
-       
-  </div>
-    <section class="taskers">
+<section class="taskers">
         <div class='container mx-auto mt-5 col-md-10 mt-100'>
             <div class="header">
                 <div class="title">Featured Taskers</div>
@@ -199,7 +244,7 @@
                 <div class="card col-md-3 mt-100">
                     <div class="card-content">
                         <div class="card-body p-0">
-                            <div class="profile"> <img src="https://res.cloudinary.com/dxfq3iotg/image/upload/v1574583336/AAA/4.jpg"> </div>
+                            <div class="profile"> <img src="./assets/images/profile_pic.png"> </div>
                             <div class="card-title"> Angelina Frederic<br /> <small>Head of marketing at K mart</small> <br> <small>⭐️100% positive reviews</small></div>
                             <div class="card-subtitle">
                                 <p> <small class="text-muted"> I expected anything less than perfect for the team of experts. They are the best team ever! </small> </p>
@@ -210,7 +255,7 @@
                 <div class="card col-md-3 mt-100">
                     <div class="card-content">
                         <div class="card-body p-0">
-                            <div class="profile"> <img src="https://res.cloudinary.com/dxfq3iotg/image/upload/v1574583319/AAA/3.jpg"> </div>
+                            <div class="profile"> <img src="./assets/images/profile_pic.png"> </div>
                             <div class="card-title"> Jackson Totham <br /> <small>CEO of Redbull</small> <br> <small>⭐️100% positive reviews</small></div>
                             <div class="card-subtitle">
                                 <p> <small class="text-muted"> I really enjoyed working with them, they are Group of Professionals and they know what they're Doing </small> </p>
@@ -221,7 +266,7 @@
                 <div class="card col-md-3 mt-100">
                     <div class="card-content">
                         <div class="card-body p-0">
-                            <div class="profile"> <img src="https://res.cloudinary.com/dxfq3iotg/image/upload/v1574583246/AAA/2.jpg"> </div>
+                            <div class="profile"> <img src="./assets/images/profile_pic.png"> </div>
                             <div class="card-title"> David Gregory<br /> <small>Resident Dj at ibdc</small> <br> <small>⭐️100% positive reviews</small></div>
                             <div class="card-subtitle">
                                 <p> <small class="text-muted"> I always wanted cool videos of my concerts never knew whom to talk to but they are amazing! </small> </p>
@@ -233,92 +278,92 @@
             
         </div>
     </section>
-    <div class="card">
-        <div class="row no-gutters">
-            <div class="col-auto">
-                <img  src="https://assets.taskrabbit.com/v3/assets/homepage/joanne-valued-tasker@720w.jpg" class="img-fluid" alt="">
-            </div>
-            <div class="col">
-                <div class="card-block px-2">
-                    <h4 class="card-title">Title</h4>
-                    <p class="card-text">Description</p>
-                    <a href="#" class="btn button1">BUTTON</a>
+    <!--here the three sidede-->
+    <section class="section pb-0 z_three">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h3 class="section-title">Ready to Get Started?</h3>
+                </div>
+                <div class="col-lg-4 col-sm-6 mb-lg- mb-4">
+                    <div class="hover-bg-primary text-center position-relative px-4 py-5 rounded-lg shadow"> <img src="https://res.cloudinary.com/dxfq3iotg/image/upload/v1559058694/feature-1.png" class="img-fluid" alt="feature-image">
+                        <h5 class="pt-5 pb-3 text-capitalize card-title">Be a part</h5>
+                        <p class="mb-4">Hear that? The sweet sigh of relief. Start getting more done.</p> <a class="btn btn-outline-secondary" href="signUp.html" data-abc="true">Sign Up</a>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-sm-6 mb-lg- mb-4">
+                    <div class="hover-bg-primary text-center position-relative px-4 py-5 rounded-lg shadow"> <img src="https://res.cloudinary.com/dxfq3iotg/image/upload/v1559058716/feature-2.png" class="img-fluid" alt="feature-image">
+                        <h5 class="pt-5 pb-3 text-capitalize card-title">How to use?</h5>
+                        <p class="mb-4"> That might be little bit risky to have crew member like them.</p> <a class="btn btn-outline-secondary" href="blog.html" data-abc="true">Read more</a>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-sm-6 mb-lg- mb-4">
+                    <div class="hover-bg-primary text-center position-relative px-4 py-5 rounded-lg shadow"> <img src="https://res.cloudinary.com/dxfq3iotg/image/upload/v1559058733/feature-3.png" class="img-fluid" alt="feature-image">
+                        <h5 class="pt-5 pb-3 text-capitalize card-title">optimized data</h5>
+                        <p class="mb-4">Grow your own business while saving the day for busy neighbors.</p> <a class="btn btn-outline-secondary" href="becomeAProvider.html" data-abc="true"> Become a Tasker</a>
+                    </div>
                 </div>
             </div>
         </div>
+    </section>
+    
+
+
+    <section class="foot">
         
-    </div>
-    <div class="container">
-        <div class="card" style="margin:10% 10% 15% 15%;padding: 15%;">
-            <div class="row no-gutters ">
-                <div class="col-6" >
-                    <img  src="./assets/images/task.png" class="img-fluid" alt="">
-                </div>
-                <div class="col-6">
-                    <img  src="./assets/images/task.png" class="img-fluid" alt="">
-                    
+        <footer>
+            <div class="row justify-content-around mb-0 pt-5 mx-4">
+                <div class="col-xl-2 col-md-6 order-xl-1 order-4 mr-xl-0 my-auto">
+                    <ul class="list-unstyled mt-md-3 mt-5">
+                        <li><a href="index.html">SAS services Provider</a></li>
+                        <li class="social"> <span> <i class="fa fa-facebook" aria-hidden="true"></i></span> <span> <i class="fa fa-instagram" aria-hidden="true"></i> </span> <span> <i class="fa fa-twitter" aria-hidden="true"></i> </span> </li>
+                    </ul>
+                    <ul class="list-unstyled my-xl-4 my-md-3">
+                        <li><a href="index.html"><img src="./assets/images/logoo.png" alt="Logo"></a></li>
                         
-                        <p class="card-text">Description</p>
-                        <a href="#" class="btn button1">BUTTON</a>
-                    
+                    </ul>
+                </div>
+                <div class="col-xl-2 col-md-3 pt-4 order-1">
+                    <ul class="list-unstyled">
+                        <li class="mt-md-0 mt-4">INFO</li>
+                        <li><a href="about.html">About SAS</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                        <li><a href="privacy.html">Terms and Privacy</a></li>
+                        <li><a href="about.html">FAQ</a></li>
+                    </ul>
+                </div>
+                <div class="col-xl-2 col-md-3 pt-4 order-2">
+                    <ul class="list-unstyled">
+                        <li class="mt-md-0 mt-4">Your needs</li>
+                        <li><a href="becomeAProvider.html">Become a Tasker</a> </li>
+                        <li><a href="services.html">All services</a></li>
+                        <li><a href="eachServices.html">Delivery services</a> </li>
+                        <li><a href="eachServices.html">Errand Running</a></li>
+                    </ul>
+                </div>
+                <div class="col-xl-auto col-md-3 pt-4 my-sm-0 order-md-3 order-sm-1 ">
+                    <ul class="list-unstyled">
+                        <li class="mt-md-0 mt-4">Offer</li>
+                        <li>Intergrated Security </li>
+                        <li>Core Features</li>
+                        <li>Product Features</li>
+                        <li>Pricing</li>
+                    </ul>
+                </div>
+               
+            </div>
+            <div class="row justify-content-center px-3 py-3 pt-5">
+                <div class="col text-center">
+                      <p>Copyright &copy; SAS 2021 All Rights Reserved.</p>
                 </div>
             </div>
-            
-      </div>
+        </footer>
     </div>
-    
-    
+</section>
 
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
 
-
-    <footer class="bg-gray8 gray2 " >
-        <div class="container-fluid padding">
-        <div class="row">
-        <div class="col-lg-4">
-          <h3>Heading</h3>
-          <p class=" text-white"> Our Pordcuts have the best estatics in the world that can attract any body  
-          Our Pordcuts have the best estatics in the world that can attract any body</p>
-          <p><a href="#"><i class="fab fa-facebook-square"></i></a>
-            <a href="#"><i class="fab fa-linkedin-square"></i></a></p>
-        </div>
-        <div class="col-md-1"></div>
-        <div class="col-md-4 li-link">
-            <h4>Links</h4>
-          <ul class="m-0 p-0">
-            <li>- <a href="#"> lorem ipsum</a>
-             
-            </li>
-            <li>- <a href="#"> lorem ipsum</a>
-             
-            </li>
-            <li>- <a href="#"> lorem ipsum</a>
-             
-            </li>
-            <li>- <a href="#"> lorem ipsum</a>
-             
-            </li>
-            <li>- <a href="#"> lorem ipsum</a>
-             
-            </li>
-            <li>- <a href="#"> lorem ipsum</a>
-             
-            </li>
-          </ul>
-         </div>
-        <div class="col-md-3 loc">
-            <h4>Location</h4>
-          <p>22 Lorem ipsum dolor, consectertur adipiscing</p>
-          <p><i class="fas fa-phone mr-3">&nbsp; 1534 245-678</i></p>
-          <p><i class="fas fa-envelope mr-3"></i> info@hsdf.com</p>
-        </div>
-      </div>
-      <div class="row mt-5">
-        <div class="col">
-            <p>&copy; 2020. All Right Reserved.</p>
-        </div>
-      
-      </div>
-    </div>
-    </footer>
+ <script src="./assets/js/task.js"></script>
 </body>
 </html>
