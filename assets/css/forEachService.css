@@ -123,7 +123,7 @@ nav{
 .cont{
     /* margin-top: 10px; */
     /* background-color: aqua; */
-    background: url(../images/deliver2.jpeg);
+    background: url(../images/back1.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     height: 600px;
@@ -132,7 +132,7 @@ nav{
 .middle{
     margin-top: 150px;
     margin-left: 550px;
-    background-color: white;
+    background-color: rgb(255, 255, 255);
     width: 500px;
     height: 250px;
     opacity: 0.8;
@@ -140,6 +140,19 @@ nav{
 
 .middle h2{
     padding-top: 40px;
+}
+
+.middle p{
+    margin-top: 25px;
+}
+
+.findtop{
+    background-color:#735798 ;
+    color: white;
+}
+
+.findtop:hover{
+    background-color: #3e1870;
 }
 
 .img{
@@ -178,18 +191,32 @@ nav{
 }
 
 .imgholder{
-    width:900px;
+    width:800px;
     height: 550px;
-    padding-left: 160px;
+    padding-left: 0px;
     padding-top: 50px;
     padding-bottom: 50px;
+    /* position: cover; */
 
 }
 
-.row5{
-    background-color: #83167ea4;
+.sec{
+    height: 700px;
+    margin-top: 50px;
 }
 
+.sec h1{
+    text-align: center;    
+}
+
+.rowfaq{
+    margin-top: 80px;
+}
+
+.ques{
+    padding-top: 40px;
+    height: 80px;
+}
 
 .title{
     font-size: 60px;
@@ -226,9 +253,15 @@ nav{
 }
 
 .help{
-    background-color: white;
+    background-color:#735798 ;
+    color: white;
     margin-top: 20px;
 }
+
+.help:hover{
+    background-color: #3e1870;
+}
+
 
 .imgholder2{
     width:700px;
