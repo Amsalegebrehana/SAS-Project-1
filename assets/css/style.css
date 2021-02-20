@@ -30,12 +30,13 @@ body{
     .dropdown:hover .service{
         padding-top: 3.9%;
     }
-    
+
 }
 
     
     
 nav{
+
     background: #ffffff !important;
     /* padding-bottom: -15%; */
     height: 80px;
@@ -46,6 +47,7 @@ nav{
     padding: 5%;
     font-weight: 400;
     margin-top: -4%;
+
 }
 
 .bar a{
@@ -99,7 +101,10 @@ nav{
 
 #service2{
     display: none;
+
 }
+
+
 
 
 
@@ -133,7 +138,60 @@ nav{
     }
 
   
+
 }
+
+.bar{
+    margin-top: 70px;
+    margin-right: 20px;
+}
+
+.bar a:hover{
+    color: #502588 ;
+}
+
+.tog i{
+    /* background-color: brown; */
+    font-size: 30px;
+    color: silver;
+}
+
+#service2{
+    display: none;
+}
+
+
+
+
+@media screen and (max-width:800px){
+    .logo{
+        margin-left: 10px;
+        /* background-color: blue; */
+        height: 100px;
+        
+    }
+
+    .pic{
+        /* background-color: brown; */
+        height: 100px;
+        width: 180px;
+    }
+
+   nav{
+       /* background-color: chartreuse; */
+       height:100px;
+   }
+
+   .dropdown-menu{
+       display: none;
+   }
+
+  
+}
+
+
+
+
 .background_image img{
     
     display: flex;
