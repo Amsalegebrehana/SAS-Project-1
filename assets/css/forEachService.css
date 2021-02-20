@@ -123,8 +123,10 @@ nav{
 .cont{
     /* margin-top: 10px; */
     /* background-color: aqua; */
-    background: url(../images/service.jpg);
-    height: 500px;
+    background: url(../images/deliver2.jpeg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 600px;
 }
 
 .middle{
@@ -133,6 +135,7 @@ nav{
     background-color: white;
     width: 500px;
     height: 250px;
+    opacity: 0.8;
 }
 
 .middle h2{
@@ -184,7 +187,14 @@ nav{
 }
 
 .row5{
-    background-color: rgb(221, 243, 250);
+    background-color: #c7c7c7;
+}
+
+
+.title{
+    font-size: 60px;
+    text-align:center;
+
 }
 
 .col5 h2{
@@ -213,6 +223,11 @@ nav{
 
 .cont6{
     margin-top: 100px;
+}
+
+.help{
+    background-color: white;
+    margin-top: 20px;
 }
 
 .imgholder2{
