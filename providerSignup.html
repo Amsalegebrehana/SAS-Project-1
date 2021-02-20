@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon"  type="image/png" href="./assets/images/logoo.png">
+    
+    <link rel="stylesheet" href="./assets/css/services.css">
+    <!-- <link rel="stylesheet" href="./assets/css/forEachService.css"> -->
+    <link rel="stylesheet" href="./assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <!-- <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" rel="stylesheet" /> -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+    <title>Service Provider</title>
+</head>
+<body>
+    
+    <nav class="nav navbar navbar-expand-md ">
+        <div class="logo">
+            <a class="nav-link active " href="index.html" ><img src="./assets/images/Slogo.png" alt="Logo" class="pic"> </a>
+         </div>
+        
+     <!-- navbar-collapse.// -->
+      </nav>
+
+      <div class="container">
+          <div class="row ">
+              <div class="col-md-6 colform2">
+
+                <div class="form-group form">
+
+                    <div class="form-group form4">
+                        <label for="detail"><p class="p12"> What do you have to offer?</p></label>
+                        <textarea name="comment" id="comment"  class="form-control"  placeholder="Write a brief description here..."></textarea>
+                    </div>
+
+                    <p class="p12">Attach proof of your experience in your chosen skill or a recommendation letter from your previous employer.</p>
+                    <a href="" class="btn btn-secondary btnrec">Add File</a>
+                       
+        
+                </div>
+
+               
+
+              </div>
+
+              <div class="col-md-6">
+                <div class="container py-5 coling">
+
+                    <!-- For demo purpose -->
+                    <header class=" text-center">
+                       
+                        <p class="lead mb-0">Upload an image to make your profile more interesting</p>
+                        <div class="image-area mt-4"><img id="imageResult" src="#" alt="" class="img-fluid rounded shadow-sm mx-auto d-block"></div>
+                        <img src="https://res.cloudinary.com/mhmd/image/upload/v1564991372/image_pxlho1.svg" alt="" width="150" class="mb-4">
+                    </header>
+                
+                
+                    <div class="row py-4">
+                        <div class="col-lg-6 mx-auto">
+                
+                            <!-- Upload image input-->
+                            <div class="input-group mb-3 px-2 py-2 rounded-pill  shadow-sm">
+                                <input id="upload" type="file" onchange="readURL(this);" class="form-control border-0">
+                                
+                                <div class="input-group-append">
+                                    <label for="upload" class="btn btn-light m-0 rounded-pill px-4"> <i class="fa fa-cloud-upload mr-2 text-muted"></i><small class="text-uppercase font-weight-bold text-muted">Upload Image</small></label>
+                                </div>
+                            </div>
+
+                            
+                
+                           
+                
+                        </div>
+                    </div>
+                </div>
+
+              </div>
+
+              <a  class="btn btn-secondary btnrec3"  href="providerSignup.html">Create Account</a>
+
+            </div>
+
+    </div>
+
+
+    <script src="./assets/js/jquery-3.4.1.min.js"></script>
+<script src="./assets/js/bootstrap.min.js"></script>
+<script src="./assets/js/services.js"></script>
+
+
+</body>
+</html>
