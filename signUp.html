@@ -15,105 +15,62 @@
 </head>
 <body>
 
+    
+<div class="container-fluid bg-overlayspec py-5">
   
-    <div id="sec_pic" class="container-fluid bg-overlayspec">
-        <div class="centered">
-            <span >
-                <div class="jumbotron">
-                 <img src="./assets/images/SAlogo.png" width="350px" height="200px"/>
-                 <div class="container formContainer">
-                   <form style="width: 100%;">
-                    <div class="form-group">
-                        <div data-validation-message="Can't be blank.">
-                            <label for="first_name">
-                                <span hidden>
-                                    First Name
-                                </span>
-                                <span hidden id="first_name-error">
-                                    Can't be blank.
-                                </span>
-                            <input class="form-control u-full-width" id="inputForm" type="text" placeholder="First Name" name="first_name" id="first_name" aria-describedby="first_name-error" class="login-input class="form-control u-full-width"-fields" value="">
-                            </label>
-                        </div>
-                    </div>
-                     <div class="form-group">
-                        <div data-validation-message="Can't be blank.">
-                            <label for="last_name">
-                                <span hidden>
-                                    Last Name
-                                </span>
-                                <span hidden id="last_name-error">
-                                    Can't be blank.
-                                </span>
-                            <input class="form-control u-full-width" id="inputForm" type="text" placeholder="Last Name" name="last_name" id="last_name" aria-describedby="last_name-error" class="login-input class="form-control u-full-width"-fields" value="">
-                             </label>
-                        </div>
-                    </div>
-                     <div class="form-group">
-                        <div data-validation-message="Can't be blank.">
-                            <label for="email">
-                                <span hidden>
-                                    Email Address
-                                </span>
-                                    <span hidden id="email-error">
-                                        Can't be blank.
-                                    </span>
-                            <input class="form-control u-full-width" id="inputForm" type="email" placeholder="Email Address" name="email" id="email" aria-describedby="email-error" class="login-input class="form-control u-full-width"-fields" value="">
-                            </label>
-                        </div>
-                    </div>
-                     <div class="form-group">
-                        <div data-validation-message="Can't be blank.">
-                            <label for="password">
-                                <span hidden>
-                                    Password
-                                </span>
-                                <span hidden id="password-error">
-                                    Can't be blank.
-                                </span>
-                            <input class="form-control u-full-width" id="inputForm" type="password" placeholder="Password" name="password" id="password" aria-describedby="password-error" class="login-input class="form-control u-full-width"-fields" value="">
-                            </label>
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <div data-validation-message="Can't be blank.">
-                            <label for="postal_code">
-                                <span hidden>
-                                    Address
-                                </span>
-                                <span hidden id="postal_code-error">
-                                    Can't be blank.
-                                </span>
-                            <input class="form-control " id="inputForm" type="text" placeholder="Address"postal_code" id="postal_code" aria-describedby="postal_code-error" class="login-input class="form-control u-full-width"-fields" value="">
-                            </label>
-                        </div>
-                    </div>
-                    <div id="terms" class="form-group">
-                        <span  >By clicking below and creating an account, <br>I agree to App’s 
-                            <a target="_blank" href="#" id="specLink">Terms of Service</a> 
-                            and 
-                            <a target="_blank" href="#" id="specLink">Privacy Policy</a>.
-                        </span>
-                    </div>
-                     <div class="form-group">
-                        <button type="submit"  id="inputForm"class="btn btn-login button1 u-full-width" data-ref="submit-signup">
-                            <span>Create account</span>
-                        </button>
-                    </div>
-                </form>
-            </div>
-                  </div>
-        </span>
+    <div class="row py-5">
+        <div class="col-md-4 mx-auto py-5">
+    
+    <div class="jumbotron mx-auto">
+        <div class="row">
+            <img src="./assets/images/SAlogo.png" width="350px" height="200px" class="mx-auto"/>
         </div>
-     
+        
+    <div class="row">
+        <div class="col-12 mx-auto">
+           <div class="myform form ">
+              <form action="" method="post" name="login" id="signUpForm">
+               <div class="form-group">
+                 <input type="text" class="form-control" id="fullName" placeholder="Full Name" required>
+               </div>
+                 <div class="form-group">
+                    <input type="email" class="form-control" name="email"  id="email" placeholder="Email" required>
+                 </div>
+                 <div class="form-group">
+                    <input type="password" class="form-control" id="password" placeholder="Password" required>
+                  </div>
+                  <div class="form-group">
+                    <input type="text" class="form-control" id="address" placeholder="Address" required>
+                  </div>
+                  <div id="terms" class="form-group">
+                    <span  >By clicking below and creating an account, <br>I agree to SAS 
+                        <a target="_blank" href="#" id="specLink">Terms of Service</a> 
+                        and 
+                        <a target="_blank" href="#" id="specLink">Privacy Policy</a>.
+                    </span>
+                </div>
+                 <div class="text-center ">
+                    <button type="submit" class="btn btn-block send-button button1" >Create Account</button>
+                 </div>
+                 </form>
+                 </div>
+                 </div>
+                 </div>
+                </div>
+              </div>     
+              </div> 
     </div>
+</div>
+
  
  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
 
-
-
+ <script src="https://unpkg.com/dexie@latest/dist/dexie.js"></script>
+ <script src="./assets/js/auth.js"></script>
+ <script src="./assets/js/signUp.js"></script>
+ 
   
 </body>
 </html>
