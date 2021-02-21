@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon"  type="image/png" href="./assets/images/logoo.png">
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" rel="stylesheet" />
+    
+    <title>Service Provider</title>
+    <link rel="stylesheet" href="./assets/css/AuthStyle.css">
+   
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+<body>
+
+
+
+  
+<div class="container-fluid">
+
+  <div class="container">
+    <div class="row">
+      <p id="myP"></p>
+    </div>
+  </div>
+    
+    <div class="jumbotron">
+        <h1> Your Account</h1>
+    <div class="row mx-auto">
+      <nav id="sidebarMenu" class=" col-sm -4 col-md-3 col-lg-2 d-md-block bg-light sidebar collapse">
+
+        <div class="nav flex-column nav-pills me-3" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+          <button class="nav-link active" id="v-pills-profile-tab" data-bs-toggle="pill" data-bs-target="#v-pills-profile" type="button" role="tab" aria-controls="v-pills-profile" aria-selected="true">Profile</button>
+          <button class="nav-link" id="v-pills-password-tab" data-bs-toggle="pill" data-bs-target="#v-pills-password" type="button" role="tab" aria-controls="v-pills-password" aria-selected="false">Password</buttona>
+          <button class="nav-link" id="v-pills-orders-tab" data-bs-toggle="pill" data-bs-target="#v-pills-orders" type="button" role="tab" aria-controls="v-pills-orders" aria-selected="false">Order</button>
+          <button class="nav-link" id="v-pills-deactivate-tab" data-bs-toggle="pill" data-bs-target="#v-pills-deactivate" type="button" role="tab" aria-controls="v-pills-deactivate" aria-selected="false">Deactivate</button>
+        </div>
+       
+      </nav>
+  
+      <main class="col-md-9 ms-sm-auto bg-light xcol-lg-10 px-md-4">
+        <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom main">
+          <div class="tab-content" id="v-pills-tabContent">
+            <div class="tab-pane fade show active" id="v-pills-profile" role="tabpanel" aria-labelledby="v-pills-profile-tab">
+              <div class="container">
+                <div class="row py-3">
+                  <h3>Account</h3>
+                  <button type="button" class="btn btn-outline-dark ms-auto">Edit</button>
+                </div>
+                <div class="row">
+                  <div class="addOn">
+
+                  </div>
+                
+                    <button type="button" class="btn btn-outline-secondary" id="logOutBtn">Log Out</button>
+                
+                  
+                  </div>
+    
+                </div>
+              </div>
+           
+            <div class="tab-pane fade" id="v-pills-password" role="tabpanel" aria-labelledby="v-pills-password-tab">
+              <div class="container">
+                <div class="row py-3">
+                  <h3>Change Password</h3>
+                </div>
+                <div class="row">
+                  <form>
+                    <div class="form-group">
+                      <label for="currentPassword">Current Password</label>
+                      <input type="password" class="form-control" id="currentPassword">
+                    </div>
+                    <div class="form-group">
+                      <label for="newPassword">New Password</label>
+                      <input type="password" class="form-control" id="newPassword">
+                    </div>
+                    <div class="form-group">
+                      <label for="confirmPassword">Confirm Password</label>
+                      <input type="password" class="form-control" id="confirmPassword">
+                    </div>
+                    <button type="button" class="btn btn-outline-secondary">Cancel</button>
+                    <button type="button" class="btn btn-dark ">Save</button>
+      
+                  </form>
+                  
+                </div>
+              </div>
+      
+            </div>
+            <div class="tab-pane fade" id="v-pills-orders" role="tabpanel" aria-labelledby="v-pills-orders-tab">...</div>
+            <div class="tab-pane fade" id="v-pills-deactivate" role="tabpanel" aria-labelledby="v-pills-deactivate-tab">  <div class="container">
+              <div class="row py-3">
+                <h3>Account Deactivation</h3>
+              </div>
+              <div class="row">
+               <p>Once you've deactivated your account, you will no longer be able to log in to the our site or apps. This action cannot be undone.</p>
+               <button type="button" class="btn btn-outline-secondary">Deactivate Account</button>
+              </div>
+            </div></div>
+          </div>
+     
+       
+        </div>
+
+
+
+       
+      
+  
+      </main>
+    </div>
+  </div>
+</div>
+
+
+
+<div class="d-flex align-items-start">
+ 
+</div>
+
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.6.0/dist/umd/popper.min.js" integrity="sha384-KsvD1yqQ1/1+IA7gi3P0tyJcT3vR+NdBTt13hSJ2lnve8agRGXTTyNaBYmCR/Nwi" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.min.js" integrity="sha384-nsg8ua9HAw1y0W1btsyWgBklPnCUAFLuTMS2G72MMONqmOymq585AcH49TLBQObG" crossorigin="anonymous"></script>
+
+<script src="https://unpkg.com/dexie@latest/dist/dexie.js"></script>
+
+<script src="./assets/js/auth.js"></script>
+<script src="./assets/js/acc.js"></script>
+
+</body>
+</html>
