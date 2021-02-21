@@ -26,17 +26,41 @@
 
       <div class="container">
           <div class="row ">
-              <div class="col-md-6 colform2">
+              <div class="col-md-6 ">
+
+                <div class="form-group form">
+                    <label class="label1" for="sel1">Select your area</label>
+                      <select class="form-control" id="sel1">
+                        <option>Addis Ababa</option>
+                        <option>Dire Dawa</option>
+                        <option>Bahir Dar</option>
+                        <option>Hawassa</option>
+                      </select>
+
+                      <label class="label1" for="sel1">Choose a Category</label>
+                      <select class="form-control" id="sel2">
+                        <option>Electrician</option>
+                        <option>Delivery Service</option>
+                        <option>Plumber</option>
+                        <option>Driver</option>
+                      </select>
+
+                      
+
+                      
+              </div>
+              
 
                 <div class="form-group form">
 
                     <div class="form-group form4">
                         <label for="detail"><p class="p12"> What do you have to offer?</p></label>
-                        <textarea name="comment" id="comment"  class="form-control"  placeholder="Write a brief description here..."></textarea>
+                        <textarea name="comment" id="comment"  class="form-control"  placeholder="Write a brief description about you..."></textarea>
                     </div>
 
-                    <p class="p12">Attach proof of your experience in your chosen skill or a recommendation letter from your previous employer.</p>
-                    <a href="" class="btn btn-secondary btnrec">Add File</a>
+                    <p class="p12">Attach proof of your experience in your chosen skill or a recommendation letter from your previous employer(Insert link in google docs format)</p>
+                    <input type="url" style="width:450px; height: 40px;" placeholder="Enter link here" id="fileurl">
+                    <!-- <a href="" class="btn btn-secondary btnrec">Add File</a> -->
                        
         
                 </div>
@@ -70,16 +94,18 @@
                             </div>
 
                             
-                
+                            
                            
                 
                         </div>
                     </div>
                 </div>
 
+                <p>SAS Service Provider would like to inform you that the initial salary is $27/hr for every category. By creating an account you agree to this term. More detailed information <a href="" class="info">here</a>.</p>
+
               </div>
 
-              <a  class="btn btn-secondary btnrec3"  href="providerSignup.html">Create Account</a>
+              <a  class="btn btn-secondary btnrec3"  href="providerSignup.html" id="createProv">Create Account</a>
 
             </div>
 
@@ -87,8 +113,12 @@
 
 
     <script src="./assets/js/jquery-3.4.1.min.js"></script>
+    <script src="https://unpkg.com/dexie@latest/dist/dexie.js"></script>
 <script src="./assets/js/bootstrap.min.js"></script>
-<script src="./assets/js/services.js"></script>
+<!-- <script src="./assets/js/services.js"></script> -->
+<script src="./assets/js/provider.js"></script>
+<!-- <script src="./assets/js/auth.js"></script>
+<script src="./assets/js/signUp.js"></script> -->
 
 
 </body>

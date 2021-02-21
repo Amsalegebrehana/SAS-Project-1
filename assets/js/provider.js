@@ -1,43 +1,49 @@
-// const fullName = document.querySelector('#fullName');
-// const email = document.querySelector('#email');
-// const password = document.querySelector('#password');
-// const address = document.querySelector('#address');
+const fn = document.querySelector('#name');
+const mail = document.querySelector('#mail');
+const pass = document.querySelector('#pass');
+const place = document.querySelector('#sel1');
+const skills=document.getElementById("sel2");
+const phoneNumber=document.getElementById("pnum");
+const description= document.getElementById("comment");
+const file= document.getElementById("fileurl");
+const P = document.getElementById("createProv");
 
-// const signUpForm = document.querySelector('#signUpForm');
 
+P.addEventListener('click', ()=>{
+    console.log("I work");
+});
 
-// signUpForm.addEventListener('submit', addUser);
-
-function addUser(e) {
+function addUser2(e) {
     e.preventDefault();
 
     let newProvider = {
         id: Date.now(),
-        username: fullName.value,
-        email: email.value,
-        password: password.value,
-        address: address.value,
+        username: fn.value,
+        mail: mail.value,
+        pass: pass.value,
+        place: place.value,
         isLoggedIn: true,
         orders: [],
-        phoneNumber: '',
-        isProvider: false,
+        phoneNumber: phoneNumber.value,
+        skill:skills.value,
+        isProvider: true,
         providerStat: {
-            description: '',
-            price: '',
+            description: description.value,
+            price: "$27/hr",
             level: '',
-            rating: 0,
+            rating: 0, 
             reviews: [],
-            fileUrl: '',
+            fileUrl: file.value,
             numHire: 0
         },
         imageUrl: '',
         isAdmin: false,
     }
 
-    addNewUser(newProvider).then(function (user) {
+    addNewProvider(newProvider).then(function (user) {
 
-        // signUpForm.reset();
-        window.location.href = `account.html?id=${newUser.id}`;
+        // P.reset();
+        // window.location.href = `account.html?id=${newProvider.id}`;
 
     });
 
