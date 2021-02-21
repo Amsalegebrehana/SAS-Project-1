@@ -9,13 +9,15 @@
     <!-- <link rel="stylesheet" href="./assets/css/forEachService.css"> -->
     <link rel="stylesheet" href="./assets/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
     <!-- <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" rel="stylesheet" /> -->
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+    <!-- <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous"> -->
     <title>Service Provider</title>
 </head>
 <body>
     
-    <nav class="nav navbar navbar-expand-md ">
+    <nav class="nav navbar navbar-expand-md sticky-top">
         <div class="logo">
             <a class="nav-link active " href="index.html" ><img src="./assets/images/Slogo.png" alt="Logo" class="pic"> </a>
          </div>
@@ -32,27 +34,33 @@
               <div class="col-md-5 colform">
                   <h2>Earn money your way</h2>
                 <h5>See how much you can make on SAS Service Provider!</h5>
-                <div class="form-group form">
-
-                    <label for="name" class="label1" >Full Name</label>
+                <div class="form-group ">
+                  <label for="name" class="label1" >Full Name</label>
                     <br>
                     <input type="text" placeholder="Enter full name" id="name">
                     <br>
+              </div>
 
-                    <label for="name" class="label1" >Email</label>
-                    <br>
-                    <input type="email" placeholder="Enter email" id="name">
+              <div class="form-group">
+                <label for="name" class="label1" >Email</label>
+                <br>
+                <input type="email" placeholder="Enter email" id="name">
 
-                    <br>
+                <br>
 
+            </div>
 
-                    <label for="name" class="label1" >Phone Number</label>
-                    <br>
-                    <input type="number" placeholder="Enter phone number" id="name">
-                    
-                    <br>
+            <div class="form-group">
+              
+              <label for="name" class="label1" >Phone Number</label>
+              <br>
+              <input type="number" placeholder="Enter phone number" id="name">
+              
+              <br>
+          </div>
 
-                        <label class="label1" for="sel1">Select your area</label>
+                <div class="form-group form">
+                      <label class="label1" for="sel1">Select your area</label>
                         <select class="form-control" id="sel1">
                           <option>Addis Ababa</option>
                           <option>Addis Ababa</option>
@@ -70,7 +78,7 @@
 
                         
 
-                        <a  class="btn btn-secondary btnstart"  href="provider.html">Get Started</a>
+                        <a  class="btn btn-secondary btnstart"  href="providerSignup.html">Get Started</a>
 
                         <p>Already have an account? <a href="login.html">Sign in</a></p>
                 </div>
