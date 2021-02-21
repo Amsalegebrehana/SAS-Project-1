@@ -27,11 +27,13 @@
 
       <div class="container-fluid">
           <div class="row">
-              <div class="col-md-7">
-                <img src="./assets/images/fix.jpeg" alt="" class="picholder">
+              <div class="col-md-6 colform2">
+                <!-- <img src="./assets/images/fix.jpeg" alt="" class="picholder"> -->
               </div>
 
-              <div class="col-md-5 colform">
+              <div class="col-md-6 colform">
+                <form class="form" method="POST" action="mailto:se.selamawit.elias@gmail.com" enctype="utf-8">
+
                   <h2>Earn money your way</h2>
                 <h5>See how much you can make on SAS Service Provider!</h5>
                 <div class="form-group ">
@@ -44,45 +46,39 @@
               <div class="form-group">
                 <label for="name" class="label1" >Email</label>
                 <br>
-                <input type="email" placeholder="Enter email" id="name">
+                <input type="email" placeholder="Enter email" id="email">
 
                 <br>
 
             </div>
 
             <div class="form-group">
+              <label for="name" class="label1" >Password</label>
+              <br>
+              <input type="password" placeholder="Enter password" id="pass">
+
+              <br>
+
+          </div>
+
+            <div class="form-group">
               
               <label for="name" class="label1" >Phone Number</label>
               <br>
-              <input type="number" placeholder="Enter phone number" id="name">
+              <input type="number" placeholder="Enter phone number" id="pnum">
               
               <br>
           </div>
 
                 <div class="form-group form">
-                      <label class="label1" for="sel1">Select your area</label>
-                        <select class="form-control" id="sel1">
-                          <option>Addis Ababa</option>
-                          <option>Addis Ababa</option>
-                          <option>Addis Ababa</option>
-                          <option>Addis Ababa</option>
-                        </select>
-
-                        <label class="label1" for="sel1">Choose a Category</label>
-                        <select class="form-control" id="sel1">
-                          <option>Electrician</option>
-                          <option>Delivery Service</option>
-                          <option>Plumber</option>
-                          <option>Driver</option>
-                        </select>
-
-                        
+                      
 
                         <a  class="btn btn-secondary btnstart"  href="providerSignup.html">Get Started</a>
 
                         <p>Already have an account? <a href="login.html">Sign in</a></p>
                 </div>
                 
+                </form>
             </div>
 
           </div>
@@ -129,11 +125,11 @@
 
 
             <div class="row rowdesc">
-                <div class="col-md-7">
-                    <img src="./assets/images/service.jpg" alt="" class="imgabout">
+                <div class="col-md-6 colabout2">
+                    <!-- <img src="./assets/images/service.jpg" alt="" class="imgabout"> -->
                 </div>
 
-                <div class="col-md-5 colabout">
+                <div class="col-md-6 colabout">
                     <h3>What is SAS Service Provider?</h3>
                     <p>SAS Service Provider connects busy people in need of help with trusted local Taskers who can lend a hand with everything from home repairs to errands. As a Tasker, you can get paid to do what you love, when and where you want — all while saving the day for someone in your city.</p>
                 </div>
@@ -257,9 +253,12 @@
 </section>
 
 <script src="./assets/js/jquery-3.4.1.min.js"></script>
+<script src="https://unpkg.com/dexie@latest/dist/dexie.js"></script>
 <script src="./assets/js/bootstrap.min.js"></script>
-<script src="./assets/js/services.js"></script>
-
+<!-- <script src="./assets/js/services.js"></script> -->
+<script src="./assets/js/provider.js"></script>
+<!-- <script src="./assets/js/auth.js"></script>
+<script src="./assets/js/signUp.js"></script> -->
 
 </body>
 </html>
