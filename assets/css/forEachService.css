@@ -27,6 +27,7 @@ nav{
     background-color:rgb(255, 255, 255);
     /* padding-bottom: -15%; */
     height: 80px;
+    /* border-bottom: rgb(177, 177, 177) 1px solid; */
 }
 #navbarResponsive{
     font-size: .99em;
