@@ -1,0 +1,57 @@
+.bg-overlayspec {
+  background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
+    url(../images/service.jpg);
+  /* opacity: 1; */
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  height: 1080px;
+  z-index: -1;
+}
+
+.jumborton {
+  position: absolute;
+  margin-left: auto;
+  margin-right: auto;
+  top: 2em;
+  padding: 32px 0 40px 0;
+  max-width: 650px;
+  border-radius: 4px;
+  background-color: white;
+  color: black;
+}
+
+#terms2 {
+  text-align: center;
+  align-content: center;
+  padding: 0px;
+  color: rgb(36, 42, 48);
+}
+
+.button1 {
+  background-color: #735798;
+  color: white;
+}
+.button1:hover {
+  color: white;
+}
+
+#specLink {
+  color: #735798;
+}
+
+.form-control {
+  width: 100%;
+}
+
+#inputForm {
+  width: 300px;
+}
+
+.button2 {
+  border: solid 1px rgb(177, 185, 195);
+  color: black;
+}
+.button2:hover {
+  color: black;
+}
