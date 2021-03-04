@@ -207,6 +207,7 @@ function updateTabs(user) {
 
 
   }
+
   else if (user.isProvider) {
 
     const newBtn = document.createElement('button');
@@ -399,6 +400,7 @@ function updateTabs(user) {
 
 
   }
+
   else if (!user.isProvider && !user.isAdmin) {
 
     const activeOrderTable = document.createElement('table');
@@ -562,6 +564,7 @@ function updateTabs(user) {
 
   }
 }
+
 function updateUI(user) {
   if (localStorage.getItem('userId')) {
 
@@ -597,6 +600,9 @@ getUserInfo({ id }).then(function (user) {
   updateTabs(user);
 });
 
+
+
+
 logOutBtn.addEventListener('click', logOut);
 
 function logOut() {
@@ -612,6 +618,8 @@ function logOut() {
   });
 
 }
+
+
 deactivateBtn.addEventListener('click', deactivate);
 
 function deactivate() {
@@ -676,3 +684,98 @@ function deleteProvider(e) {
   }
 }
 
+function processOrder(e) {
+  const orderId = Number(e.target.parentElement.parentElement.getAttribute('data-order-id'));
+  getOrderInfo({ orderId }).then(function (order) {
+
+    if (e.target.id === 'acceptBtn') {
+      order.isPending = false;
+      order.isAccepted = true;
+      updateOrder(order.orderId, order).then(function () {
+        window.location.reload();
+      });
+    }
+    if (e.target.id === 'denyBtn') {
+      order.isPending = false;
+      order.isDeclined = true;
+      updateOrder(orderId, order).then(function () {
+        window.location.reload();
+      });
+    }
+    if (e.target.id === 'smOneElseBtn') {
+      const cat = e.target.parentElement.parentElement.getAttribute('data-providerSkill-id');
+
+      getCategoryInfo({ categoryname: cat }).then(function (category) {
+
+        removeOrder(orderId).then(function () {
+          window.location.href = `chooseAProvider.html?id=${category.categoryid}`;
+        });
+      });
+
+    }
+
+
+    if (e.target.id === 'completeBtn') {
+
+      order.isReviewing = true;
+      updateOrder(orderId, order).then(function () {
+
+        window.location.reload();
+      });
+
+    }
+
+    if (e.target.id === 'reviewBtn') {
+      const reviewRating = prompt("Rate the service (1.0-5.0): ");
+      const reviewMessage = prompt("Review Service: ");
+      let reviewer;
+      getUserInfo({ id: order.userId }).then(function (user) {
+        reviewer = user.username;
+        order.review = {
+          reviewer, reviewMessage, reviewRating
+        };
+        getUserInfo({ id: order.providerId }).then(function (provider) {
+          provider.providerStat.reviews.push(order.review);
+          provider.providerStat.numHire += 1
+          update(provider.id, provider).then(function () {
+            order.isComplete = true;
+            order.isAccepted = false;
+            order.isDeclined = false;
+            updateOrder(orderId, order).then(function () {
+              window.location.reload();
+            });
+          });
+        });
+      });
+
+    }
+
+    if (e.target.id === 'deleteBtn') {
+
+
+      removeOrder(orderId).then(function () {
+        window.location.reload();
+      });
+
+    }
+  });
+}
+
+// changePW.addEventListener('click', changepassword);
+
+// function changepassword() {
+
+//   getUserInfo({ id }).then(function (user) {
+//     if (user.password === currentPassword.value && currentPassword.value === confirmPassword.value) {
+//       user.password = newPassword;
+//       console.log(user);
+//       update(user.id, user).then(function () {
+//         window.location.reload();
+//       })
+//     } else {
+//       console.log('passwords dont match')
+//     }
+//   });
+
+
+// }
