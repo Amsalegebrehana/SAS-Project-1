@@ -597,3 +597,32 @@ getUserInfo({ id }).then(function (user) {
   updateTabs(user);
 });
 
+logOutBtn.addEventListener('click', logOut);
+
+function logOut() {
+
+  getUserInfo({ id }).then(function (user) {
+
+    user.isLoggedIn = false;
+    update(id, user).then(function () {
+      localStorage.removeItem('userId');
+      window.location.href = `login.html`;
+      updateUI(user);
+    })
+  });
+
+}
+deactivateBtn.addEventListener('click', deactivate);
+
+function deactivate() {
+  if (confirm('Are You Sure you want to deactivate your account ?')) {
+
+    deleteUser(id).then(function (user) {
+      localStorage.removeItem('userId');
+      console.log('deleted');
+      window.location.href = `index.html`;
+
+    });
+  }
+}
+
