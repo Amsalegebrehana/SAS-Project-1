@@ -207,3 +207,195 @@ function updateTabs(user) {
 
 
   }
+  else if (user.isProvider) {
+
+    const newBtn = document.createElement('button');
+
+    newBtn.className = 'nav-link';
+    newBtn.id = 'v-pills-skills-tab';
+    newBtn.setAttribute("data-bs-toggle", "pill");
+    newBtn.setAttribute("data-bs-target", "#v-pills-skills");
+    newBtn.setAttribute("type", "button");
+    newBtn.setAttribute("role", "tab");
+    newBtn.setAttribute("aria-controls", "v-pills-skills");
+    newBtn.setAttribute("aria-selected", "false");
+
+
+    newBtn.innerHTML = `
+   Skills
+    `;
+
+    tabControlArray.splice(2, 0, newBtn);
+    tabControlArray.splice(4)
+    tabControls.innerHTML = '';
+
+    tabControlArray.forEach((elmnt) => {
+      tabControls.appendChild(elmnt);
+    });
+
+    const newSec = document.createElement('div');
+
+    newSec.className = 'tab-pane fade';
+    newSec.id = 'v-pills-skills';
+    newSec.setAttribute("aria-labelledby", "v-pills-skills-tab");
+    newSec.setAttribute("role", "tabpanel");
+
+
+    const divContent = document.createElement('div');
+    divContent.innerHTML = ` 
+    
+    <div class="row">
+    <h5>Skill</h5>
+    <p >${user.providerStat.skill}</p>
+    <h5>Description</h5>
+    <p >${user.providerStat.description}</p>
+    <h5>File URL</h5>
+    <p >${user.providerStat.fileUrl}</p>
+  </div>`;
+
+    newSec.appendChild(divContent);
+
+
+
+    tabsArray.splice(2, 0, newSec);
+    tabs.innerHTML = '';
+
+    tabsArray.forEach((elmnt) => {
+      tabs.appendChild(elmnt);
+    });
+
+    const activeOrderTable = document.createElement('table');
+    activeOrderTable.className = 'table';
+    const activeOrderTableHeader = document.createElement('thead');
+    activeOrderTableHeader.innerHTML = `
+    <tr>
+    <th scope="col">Active Orders</th>
+    <th></th>
+  </tr>
+    `;
+    const activeOrderTableContent = document.createElement('tbody');
+
+    const pendingOrderTable = document.createElement('table');
+    pendingOrderTable.className = 'table';
+    const pendingOrderTableHeader = document.createElement('thead');
+    pendingOrderTableHeader.innerHTML = `
+  <tr>
+  <th scope="col">Pending Orders</th>
+  <th></th>
+</tr>
+`;
+    const pendingOrderTableContent = document.createElement('tbody');
+
+
+    const completeOrderTable = document.createElement('table');
+    completeOrderTable.className = 'table';
+    const completeOrderTableHeader = document.createElement('thead');
+    completeOrderTableHeader.innerHTML = `
+  <tr>
+  <th scope="col">Complete Orders</th>
+  <th></th>
+</tr>
+`;
+    const completeOrderTableContent = document.createElement('tbody');
+
+    let orders = user.tasks;
+
+    orders.forEach((ord) => {
+      getOrderInfo({ orderId: ord.orderId }).then(function (order) {
+        if (order.isAccepted) {
+
+          getUserInfo({ id: order.userId }).then(function (userFound) {
+
+            newRow = document.createElement('tr');
+            newRow.setAttribute('data-order-id', order.orderId);
+
+            newRow.innerHTML = `
+          <td>UserName:${userFound.username}<br>
+          Email:${userFound.email}<br>
+          Phone Number:${userFound.phoneNumber}<br>
+          Service: ${user.providerStat.skill} <br>
+          Address:${userFound.address}
+          </td>
+        
+        
+          <td>
+          <a class="btn btn-primary text-light ${order.isReviewing ? 'disabled' : ''}" type="button" id="completeBtn">${order.isReviewing ? 'Reviewing...' : 'Complete'}</a>
+         
+          </td>
+          `;
+
+            activeOrderTableContent.appendChild(newRow);
+          });
+
+
+        } else if (order.isComplete) {
+
+          getUserInfo({ id: order.userId }).then(function (userFound) {
+
+            newRow = document.createElement('tr');
+            newRow.setAttribute('data-order-id', order.orderId);
+
+            newRow.innerHTML = `
+          <td>UserName:${userFound.username}<br>
+          Email:${userFound.email}<br>
+          Phone Number:${userFound.phoneNumber}<br>
+          Service: ${user.providerStat.skill} <br>
+          Address:${userFound.address}
+          </td>
+        
+        
+          <td></td>
+          `;
+
+            completeOrderTableContent.appendChild(newRow);
+          });
+
+        } else if (order.isPending) {
+
+          getUserInfo({ id: order.userId }).then(function (userFound) {
+
+            newRow = document.createElement('tr');
+            newRow.setAttribute('data-order-id', order.orderId);
+
+            newRow.innerHTML = `
+          <td>UserName:${userFound.username}<br>
+          Service: ${user.providerStat.skill} <br>
+          Address:${userFound.address}
+          </td>
+        
+          <td>
+          <a class="btn btn-primary text-light" type="button" id="acceptBtn">Accept</a>
+          <a class="btn btn-danger text-light" type="button" id="denyBtn">Deny</a>
+          </td>
+          `;
+
+            pendingOrderTableContent.appendChild(newRow);
+
+          });
+
+        }
+
+      });
+
+    });
+
+    activeOrderTable.appendChild(activeOrderTableHeader);
+    pendingOrderTable.appendChild(pendingOrderTableHeader);
+    completeOrderTable.appendChild(completeOrderTableHeader);
+    activeOrderTable.appendChild(activeOrderTableContent);
+    pendingOrderTable.appendChild(pendingOrderTableContent);
+    completeOrderTable.appendChild(completeOrderTableContent);
+
+    const orderTablesContainer = document.createElement('div');
+
+    orderTablesContainer.appendChild(activeOrderTable);
+    orderTablesContainer.appendChild(pendingOrderTable);
+    orderTablesContainer.appendChild(completeOrderTable);
+
+    userOrder.appendChild(orderTablesContainer);
+
+    pendingOrderTable.addEventListener('click', processOrder);
+    activeOrderTable.addEventListener('click', processOrder);
+
+
+  }
