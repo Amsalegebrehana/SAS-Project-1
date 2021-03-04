@@ -13,6 +13,7 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
     <!-- <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous"> -->
     <title>Service Provider</title>
+
 </head>
 <body>
     
@@ -24,101 +25,123 @@
      <!-- navbar-collapse.// -->
       </nav>
 
+
+
       <div class="container">
-          <div class="row ">
-              <div class="col-md-6 ">
-
-                <div class="form-group form">
-                    <label class="label1" for="sel1">Select your area</label>
-                      <select class="form-control" id="sel1">
-                        <option>Addis Ababa</option>
-                        <option>Dire Dawa</option>
-                        <option>Bahir Dar</option>
-                        <option>Hawassa</option>
-                      </select>
-
-                      <label class="label1" for="sel1">Choose a Category</label>
-                      <select class="form-control" id="sel2">
-                        <option>Electrician</option>
-                        <option>Delivery Service</option>
-                        <option>Plumber</option>
-                        <option>Driver</option>
-                      </select>
-
-                      
-
-                      
-              </div>
-              
-
-                <div class="form-group form">
-
-                    <div class="form-group form4">
-                        <label for="detail"><p class="p12"> What do you have to offer?</p></label>
-                        <textarea name="comment" id="comment"  class="form-control"  placeholder="Write a brief description about you..."></textarea>
-                    </div>
-
-                    <p class="p12">Attach proof of your experience in your chosen skill or a recommendation letter from your previous employer(Insert link in google docs format)</p>
-                    <input type="url" style="width:450px; height: 40px;" placeholder="Enter link here" id="fileurl">
-                    <!-- <a href="" class="btn btn-secondary btnrec">Add File</a> -->
-                       
-        
+        <form class="form" enctype="utf-8" id="providerForm">
+          <div class="row">
+            <div class="col-md-6">
+                <div class="form-group ">
+                    <label for="name" class="label1" >Full Name</label>
+                      <br>
+                      <input type="text" placeholder="Enter your Name" id="name" required>
+                      <br>
                 </div>
-
-               
-
+    
+                <div class="form-group">
+                  <label for="name" class="label1" >Email</label>
+                  <br>
+                  <input type="email" placeholder="Enter your Email" id="email" required>
+    
+                  <br>
+    
               </div>
 
-              <div class="col-md-6">
-                <div class="container py-5 coling">
+              <div class="form-group form">
+                <label class="label1" for="sel1">Select your area</label>
+                  <select class="form-control" id="sel1" required>
+                    <option value="" disabled selected hidden>Select your Area</option>
+                    <option>Addis Ababa</option>
+                    <option>Dire Dawa</option>
+                    <option>Bahir Dar</option>
+                    <option>Hawassa</option>
+                  </select>
 
-                    <!-- For demo purpose -->
-                    <header class=" text-center">
-                       
-                        <p class="lead mb-0">Upload an image to make your profile more interesting</p>
-                        <div class="image-area mt-4"><img id="imageResult" src="#" alt="" class="img-fluid rounded shadow-sm mx-auto d-block"></div>
-                        <img src="https://res.cloudinary.com/mhmd/image/upload/v1564991372/image_pxlho1.svg" alt="" width="150" class="mb-4">
-                    </header>
-                
-                
-                    <div class="row py-4">
-                        <div class="col-lg-6 mx-auto">
-                
-                            <!-- Upload image input-->
-                            <div class="input-group mb-3 px-2 py-2 rounded-pill  shadow-sm">
-                                <input id="upload" type="file" onchange="readURL(this);" class="form-control border-0">
-                                
-                                <div class="input-group-append">
-                                    <label for="upload" class="btn btn-light m-0 rounded-pill px-4"> <i class="fa fa-cloud-upload mr-2 text-muted"></i><small class="text-uppercase font-weight-bold text-muted">Upload Image</small></label>
-                                </div>
-                            </div>
+                  <label class="label1" for="sel1">Choose a Category</label>
+                  <select class="form-control" id="sel2" required>
+                    <option value="" disabled selected hidden>Select your Skill</option>
+                    
+                  </select>
 
-                            
-                            
-                           
-                
-                        </div>
-                    </div>
-                </div>
+          </div>
 
-                <p>SAS Service Provider would like to inform you that the initial salary is $27/hr for every category. By creating an account you agree to this term. More detailed information <a href="" class="info">here</a>.</p>
+          <div class="form-group form">
 
-              </div>
-
-              <a  class="btn btn-secondary btnrec3"  href="providerSignup.html" id="createProv">Create Account</a>
-
+            <div class="form-group form4">
+                <label for="detail"><p class="p12"> What do you have to offer?</p></label>
+                <textarea name="comment" id="comment"  class="form-control"  placeholder="Write a brief description about you..."></textarea>
             </div>
 
+
+        </div>
+
+
+        
+ 
+       
+
+            </div>
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label for="name" class="label1" >Password</label>
+                    <br>
+                    <input type="password" placeholder="Enter password" id="pass" required>
+        
+                    <br>
+        
+                </div>
+        
+                  <div class="form-group">
+                    
+                    <label for="name" class="label1" >Phone Number</label>
+                    <br>
+                    <input type="number" placeholder="Enter Phone Number" id="pnum" required>
+                    
+                    <br>
+                </div>
+
+                <div class="form-group form">
+
+                                          
+                    <p class="p12">Upload Image(Insert link from google drive)</p>
+                    <input type="url" style="width:450px; height: 40px;" placeholder="Enter link here" id="imageurl" required>
+                    <!-- <a href="" class="btn btn-secondary btnrec">Add File</a> -->
+                       
+                    
+            <p class="p12" >Attach proof of your experience in your chosen skill or a recommendation letter from your previous employer(Insert link in google docs format)</p>
+            <input type="url" style="width:450px; height: 40px;" placeholder="Enter link here" id="fileurl" required>
+            
+               
+        
+                </div>
+               
+               
+
+                <p class="p12">SAS Service Provider would like to inform you that the initial salary is $27/hr for every category. By creating an account you agree to this term. More detailed information <a href="privacy.html" class="info" id="specLink">here</a>.</p>
+
+            
+            </div>
+
+          </div>
+        
+
+              <button type="submit" class="btn btn-secondary btnrec3"  href="providerSignup.html" id="createProv">Create Account</button>
+
+            
+        </div>
+        </form>
+
     </div>
+    
 
 
     <script src="./assets/js/jquery-3.4.1.min.js"></script>
     <script src="https://unpkg.com/dexie@latest/dist/dexie.js"></script>
 <script src="./assets/js/bootstrap.min.js"></script>
-<!-- <script src="./assets/js/services.js"></script> -->
+
+<script src="./assets/js/auth.js"></script>
 <script src="./assets/js/provider.js"></script>
-<!-- <script src="./assets/js/auth.js"></script>
-<script src="./assets/js/signUp.js"></script> -->
+
 
 
 </body>
