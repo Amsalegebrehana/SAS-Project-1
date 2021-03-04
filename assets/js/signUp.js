@@ -2,8 +2,11 @@ const fullName = document.querySelector('#fullName');
 const email = document.querySelector('#email');
 const password = document.querySelector('#password');
 const address = document.querySelector('#address');
-
+const phoneNum = document.querySelector('#phoneNum');
 const signUpForm = document.querySelector('#signUpForm');
+
+const urlParams = new URLSearchParams(window.location.search);
+const providerId = Number(urlParams.get('providerId'));
 
 
 signUpForm.addEventListener('submit', addUser);
@@ -19,7 +22,7 @@ function addUser(e) {
         address: address.value,
         isLoggedIn: true,
         orders: [],
-        phoneNumber: '',
+        phoneNumber: phoneNum.value,
         isProvider: false,
         providerStat: {},
         imageUrl: '',
@@ -27,9 +30,17 @@ function addUser(e) {
     }
 
     addNewUser(newUser).then(function (user) {
-
         signUpForm.reset();
-        window.location.href = `account.html?id=${newUser.id}`;
+        localStorage.setItem('userId', newUser.id);
+
+        if (providerId) {
+            window.location.href = `providerProfile.html?id=${providerId}`;
+
+        } else {
+            window.location.href = `index.html`;
+            updateUI(user);
+        }
+
 
     });
 
