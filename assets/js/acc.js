@@ -562,3 +562,38 @@ function updateTabs(user) {
 
   }
 }
+function updateUI(user) {
+  if (localStorage.getItem('userId')) {
+
+    profileSec.innerHTML = ` 
+    
+  
+      <div class="col-md-4">
+        <img src=${user.imageUrl ? user.imageUrl : "./assets/images/default_avatar.png"} width="100px" height="130px" alt="">
+      </div>
+      <div class="col-md-8">
+        <div class="row">
+          <p><i class="fas fa-user-alt"></i> &nbsp; ${user.username} </p>
+        </div>
+        <div class="row">
+          <p><i class="far fa-envelope"></i> &nbsp; ${user.email} </p>
+        </div>
+        <div class="row">
+          <p><i class="fas fa-map-marker-alt"></i> &nbsp;${user.address} </p>
+        </div>
+      </div>
+    
+    
+
+    `
+
+  } else {
+    window.location.href = `login.html`;
+  }
+};
+
+getUserInfo({ id }).then(function (user) {
+  updateUI(user);
+  updateTabs(user);
+});
+
