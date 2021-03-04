@@ -626,3 +626,53 @@ function deactivate() {
   }
 }
 
+function addCategory(e) {
+  e.preventDefault();
+
+  let newCategory = {
+    categoryid: Date.now(),
+    categoryname: categoryNew.value,
+    numProviders: 0,
+    categoryImageUrl: catImageUrl.value,
+
+  }
+
+  addNewCategory(newCategory).then(function (category) {
+    window.location.reload();
+  });
+
+}
+
+function deleteCategory(e) {
+
+  if (e.target.parentElement.classList.contains('remove-item')) {
+    if (confirm('Are You Sure you want to remove that category ?')) {
+
+      let categoryId = Number(e.target.parentElement.parentElement.getAttribute('data-category-id'));
+      deleteCategoryFromDB(categoryId).then(function () {
+
+        window.location.reload();
+
+      });
+
+    }
+
+  }
+
+}
+
+function deleteProvider(e) {
+  if (e.target.parentElement.classList.contains('remove-item')) {
+    if (confirm('Are You Sure you want to remove that provider ?')) {
+
+      let providerId = Number(e.target.parentElement.parentElement.parentElement.getAttribute('data-provider-id'));
+      deleteProviderFromDB(providerId).then(function () {
+
+        window.location.reload();
+
+      });
+    }
+
+  }
+}
+
