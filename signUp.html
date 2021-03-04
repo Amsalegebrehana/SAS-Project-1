@@ -10,7 +10,7 @@
     
     <title>Service Provider</title>
     <link rel="stylesheet" href="./assets/css/AuthStyle.css">
-   
+    
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 </head>
 <body>
@@ -23,7 +23,7 @@
     
     <div class="jumbotron mx-auto">
         <div class="row">
-            <img src="./assets/images/SAlogo.png" width="350px" height="200px" class="mx-auto"/>
+          <a href="index.html">    <img src="./assets/images/Slogo.png" width="350px" height="200px" class="mx-auto"/>  </a>
         </div>
         
     <div class="row">
@@ -40,13 +40,25 @@
                     <input type="password" class="form-control" id="password" placeholder="Password" required>
                   </div>
                   <div class="form-group">
-                    <input type="text" class="form-control" id="address" placeholder="Address" required>
+                    <input type="number" class="form-control" placeholder="Enter Phone Number" id="phoneNum" required>
+                  </div>
+                  <div class="form-group">
+                
+                
+                      <select class="form-control" id="address" required>
+                        <option value="" disabled selected hidden>Select your Area</option>
+                        <option value="Addis Ababa">Addis Ababa</option>
+                        <option value="Dire Dawa">Dire Dawa</option>
+                        <option value="Bahir Dar">Bahir Dar</option>
+                        <option value="Hawassa">Hawassa</option>
+                      </select>
+
                   </div>
                   <div id="terms" class="form-group">
                     <span  >By clicking below and creating an account, <br>I agree to SAS 
-                        <a target="_blank" href="#" id="specLink">Terms of Service</a> 
+                        <a target="_blank" href="privacy.html" id="specLink">Terms of Service</a> 
                         and 
-                        <a target="_blank" href="#" id="specLink">Privacy Policy</a>.
+                        <a target="_blank" href="pr" id="specLink">Privacy Policy</a>.
                     </span>
                 </div>
                  <div class="text-center ">
@@ -68,6 +80,8 @@
  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
 
  <script src="https://unpkg.com/dexie@latest/dist/dexie.js"></script>
+ <script src="./assets/js/defaultCategories.js"></script>
+ <script src="./assets/js/defaultProviders.js"></script>
  <script src="./assets/js/auth.js"></script>
  <script src="./assets/js/signUp.js"></script>
  
