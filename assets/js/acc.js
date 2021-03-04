@@ -399,3 +399,166 @@ function updateTabs(user) {
 
 
   }
+  else if (!user.isProvider && !user.isAdmin) {
+
+    const activeOrderTable = document.createElement('table');
+    activeOrderTable.className = 'table';
+    const activeOrderTableHeader = document.createElement('thead');
+    activeOrderTableHeader.innerHTML = `
+    <tr>
+    <th scope="col">Active Orders</th>
+    <th></th>
+  </tr>
+    `;
+    const activeOrderTableContent = document.createElement('tbody');
+
+    const pendingOrderTable = document.createElement('table');
+    pendingOrderTable.className = 'table';
+    const pendingOrderTableHeader = document.createElement('thead');
+    pendingOrderTableHeader.innerHTML = `
+  <tr>
+  <th scope="col">Pending Orders</th>
+  <th></th>
+</tr>
+`;
+    const pendingOrderTableContent = document.createElement('tbody');
+
+
+    const completeOrderTable = document.createElement('table');
+    completeOrderTable.className = 'table';
+    const completeOrderTableHeader = document.createElement('thead');
+    completeOrderTableHeader.innerHTML = `
+  <tr>
+  <th scope="col">Complete Orders</th>
+  <th></th>
+</tr>
+`;
+    const completeOrderTableContent = document.createElement('tbody');
+
+
+
+    const declinedOrderTable = document.createElement('table');
+    declinedOrderTable.className = 'table';
+    const declinedOrderTableHeader = document.createElement('thead');
+    declinedOrderTableHeader.innerHTML = `
+  <tr>
+  <th scope="col">Declined Orders</th>
+  <th></th>
+</tr>
+`;
+    const declinedOrderTableContent = document.createElement('tbody');
+
+
+
+    let orders = user.orders;
+    orders.forEach((ord) => {
+      getOrderInfo({ orderId: ord.orderId }).then(function (order) {
+
+        if (order.isAccepted) {
+
+          getUserInfo({ id: order.providerId }).then(function (provider) {
+
+            newRow = document.createElement('tr');
+            newRow.setAttribute('data-order-id', order.orderId);
+
+            newRow.innerHTML = `
+            <td>Username:${provider.username}<br>
+          Email:${provider.email}<br>
+          Phone Number:${provider.phoneNumber}<br>
+          Service:${provider.providerStat.skill}
+          </td>
+        
+          <td><a class="btn btn-primary text-light ${order.isReviewing ? '' : 'disabled'}" type="button" id="reviewBtn">Review</a></td>
+          `;
+
+            activeOrderTableContent.appendChild(newRow);
+          });
+
+
+        } else if (order.isComplete) {
+
+          getUserInfo({ id: order.providerId }).then(function (provider) {
+
+            newRow = document.createElement('tr');
+            newRow.setAttribute('data-order-id', order.orderId);
+
+            newRow.innerHTML = `
+          <td>Username:${provider.username}<br>
+          Email:${provider.email}<br>
+          Phone Number:${provider.phoneNumber}<br>
+          Service:${provider.providerStat.skill}
+          </td>
+        
+          <td></td>
+          `;
+
+            completeOrderTableContent.appendChild(newRow);
+          });
+
+        } else if (order.isPending) {
+
+          getUserInfo({ id: order.providerId }).then(function (provider) {
+
+            newRow = document.createElement('tr');
+            newRow.setAttribute('data-order-id', order.orderId);
+
+            newRow.innerHTML = `
+          <td>Username:${provider.username}<br>
+          Service:${provider.providerStat.skill}<br>
+          </td>
+        
+          <td><a class="btn btn-danger text-light" type="button" id="deleteBtn">Delete</a></td>
+          `;
+
+            pendingOrderTableContent.appendChild(newRow);
+
+          });
+
+        } else if (order.isDeclined) {
+
+          getUserInfo({ id: order.providerId }).then(function (provider) {
+
+            newRow = document.createElement('tr');
+            newRow.setAttribute('data-order-id', order.orderId);
+            newRow.setAttribute('data-providerSkill-id', provider.providerStat.skill);
+            newRow.innerHTML = `
+            <td>Username:${provider.username}<br>
+            Service:${provider.providerStat.skill}<br>
+            </td>
+        
+          <td><a class="btn btn-success text-light" type="button" id="smOneElseBtn">Hire Someone else</a></td>
+          `;
+
+            declinedOrderTableContent.appendChild(newRow);
+
+          });
+
+        }
+      });
+    });
+
+
+    activeOrderTable.appendChild(activeOrderTableHeader);
+    pendingOrderTable.appendChild(pendingOrderTableHeader);
+    completeOrderTable.appendChild(completeOrderTableHeader);
+    declinedOrderTable.appendChild(declinedOrderTableHeader);
+    activeOrderTable.appendChild(activeOrderTableContent);
+    pendingOrderTable.appendChild(pendingOrderTableContent);
+    completeOrderTable.appendChild(completeOrderTableContent);
+    declinedOrderTable.appendChild(declinedOrderTableContent);
+
+    const orderTablesContainer = document.createElement('div');
+
+    orderTablesContainer.appendChild(activeOrderTable);
+    orderTablesContainer.appendChild(pendingOrderTable);
+    orderTablesContainer.appendChild(completeOrderTable);
+    orderTablesContainer.appendChild(declinedOrderTable);
+
+    userOrder.appendChild(orderTablesContainer);
+
+    pendingOrderTable.addEventListener('click', processOrder);
+    activeOrderTable.addEventListener('click', processOrder);
+    declinedOrderTable.addEventListener('click', processOrder);
+
+  }
+}
