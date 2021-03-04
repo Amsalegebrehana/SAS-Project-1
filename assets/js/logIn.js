@@ -1,6 +1,7 @@
 const emailInput = document.querySelector('#emailLogin');
 const passwordInput = document.querySelector('#passwordLogin');
-
+const urlParams = new URLSearchParams(window.location.search);
+const providerId = Number(urlParams.get('providerId'));
 const logInForm = document.querySelector('#logInForm');
 
 
@@ -13,13 +14,19 @@ function logUser(e) {
     const password = passwordInput.value;
 
     getUserInfo({ email }).then(function (user) {
-
         if (user.password === password) {
             user.isLoggedIn = true;
-
+            localStorage.setItem('userId', user.id);
             update(user.id, user).then(function () {
-                window.location.href = `account.html?id=${user.id}`;
-                updateUI(user);
+                if (providerId) {
+                    window.location.href = `providerProfile.html?id=${providerId}`;
+
+
+                } else {
+                    window.location.href = `index.html`;
+                    updateUI(user);
+                }
+
             })
         } else {
             console.log("error")
